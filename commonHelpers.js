@@ -1,2 +1,0 @@
-import"./assets/styles-bdcbc13b.js";import"./assets/vendor-10fca05e.js";const i={homeLinc:document.querySelector("a.home-link"),shoppingListLinc:document.querySelector("a.shopping-list-link")};switch(window.location.href){case i.homeLinc.href:i.homeLinc.classList.add("active-link");break;case i.shoppingListLinc.href:i.shoppingListLinc.classList.add("active-link");break}
-//# sourceMappingURL=commonHelpers.js.map
