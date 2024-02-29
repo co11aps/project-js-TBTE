@@ -1,5 +1,23 @@
+.header {
+    display: flex;
+    height: 64px;
+    background: #fff;
+    border: 1.50px solid #111;
+    border-radius: 0 0 8px 8px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 72px;
+    }
+}
+
 .active-link {
-    background: #eac645;
+    background: #c7d250;
     border-radius: 36px;
     padding: 7px 16px;
     width: 176px;

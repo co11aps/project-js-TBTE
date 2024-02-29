@@ -1,0 +1,90 @@
+.main-container {
+    width: 375px;
+    margin: 0 auto;
+
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+    background: #f6f6f6;
+}
+
+
+.side-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.categories-container {
+    width: 335px;
+    height: 228px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* background-color: #e10f0f; */
+}
+
+
+.funds-container {
+    width: 335px;
+    height: 460px;
+    border-radius: 16px;
+    box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        width: 768px;
+    }
+
+    .content-container {
+        padding: 40px 32px;
+        gap: 100px;
+    }
+
+    .side-block {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .categories-container {
+        width: 337px;
+        height: 472px;
+    }
+
+    .funds-container {
+        width: 337px;
+        height: 472px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-container {
+        width: 1440px;
+    }
+
+    .content-container {
+        padding: 40px 24px;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .side-block {
+        flex-direction: column;
+        gap: 86px;
+    }
+
+    .categories-container {
+        width: 356px;
+        height: 472px;
+    }
+
+    .funds-container {
+        width: 356px;
+        height: 472px;
+    }
+}

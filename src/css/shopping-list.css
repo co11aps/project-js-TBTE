@@ -1,0 +1,33 @@
+.shopping-side-block {
+    display: none;
+}
+
+.shopping-list-title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1875;
+    letter-spacing: -0.04em;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+.shopping-list-title-part {
+    color: #4f2ee8;
+}
+
+@media screen and (min-width: 768px) {
+
+    .shopping-list-title {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .shopping-side-block {
+        display: flex;
+        flex-direction: column;
+        gap: 86px;
+    }
+}
