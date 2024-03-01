@@ -15,17 +15,23 @@ import { getCategories } from './js/books-api.js';
 import { getPopularBooks } from './js/books-api.js';
 import { getBooksByCategory } from './js/books-api.js';
 import { getBookInfo } from './js/books-api.js';
+import { loaderOn } from './js/preloader.js';
+import { loaderOff } from './js/preloader.js';
 
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
 
 async function renderMainPageBookList() {
+  loaderOn();
   const data = await getPopularBooks();
+  loaderOff();
   renderHomeBooksMarkup(data);
 }
 
 async function renderMainCategoriesList() {
+  loaderOn();
   const data = await getCategories();
+  loaderOff();
   createCategoriesList(data);
 }
 
