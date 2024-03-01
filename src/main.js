@@ -9,3 +9,14 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+
+import { getCategories } from './js/books-api.js';
+import { getPopularBooks } from './js/books-api.js';
+import { getBooksByCategory } from './js/books-api.js';
+import { getBookInfo } from './js/books-api.js';
+
+import { renderHomeBooksMarkup } from './js/block-home-books.js';
+
+const popularBooks = await getPopularBooks();
+
+renderHomeBooksMarkup(popularBooks);

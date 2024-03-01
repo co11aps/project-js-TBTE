@@ -12,6 +12,8 @@
 @import url('./shopping-list.css');
 @import url('./modal-window.css');
 @import url('./mobile-menu.css');
+@import url('./block-home-books.css');
+
 
 :root {
   font-family: 'DM Sans', sans-serif;
