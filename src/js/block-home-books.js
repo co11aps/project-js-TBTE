@@ -31,7 +31,7 @@ function templateBookCategoryEl({ books }) {
     `</ul>
                     <button class="button see-more-btn" data-category-home="${bookCategory}">See More</button>
                 </li>`;
-
+  console.log('Hello');
   return result;
 }
 

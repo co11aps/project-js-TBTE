@@ -18,5 +18,6 @@ import { getBookInfo } from './js/books-api.js';
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
 
 const popularBooks = await getPopularBooks();
+console.log(popularBooks);
 
 renderHomeBooksMarkup(popularBooks);
