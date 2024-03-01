@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+
 import saveTheChildren from '../images/funds-logo/save-the-children.png';
 import projectHope from '../images/funds-logo/project-hope.png';
 import united24 from '../images/funds-logo/united24.png';
@@ -56,22 +59,29 @@ const fundsList = [
   },
 ];
 
+// onclick="event.preventDefault()
+const fundsListContainer = document.querySelector('.mySwiper');
+
 const markup = fundsList
   .map(
-    ({ preview, original, description }) => `<li class="swiper-slide">
-  <a class="gallery-link" href="${original}" target=blank onclick="event.preventDefault()">
-
-<div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-      </div>
-
-    <img
-      class="gallery-image"
-      src="${preview}"
-      data-source="${original}"
-      alt="${description}"
-    />
+    ({ url, img }) => `<div class="swiper-slide">
+  <a class="fund-link" href="${url}" target=blank">
+     <img src="${img}" />
   </a>
-</li>`
+</div>`
   )
   .join('');
+
+console.log(markup);
+
+fundsListContainer.insertAdjacentHTML('afterbegin', markup);
+
+const swiper = new Swiper('.mySwiper', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  direction: 'vertical',
+  //   slidesPerView: 2,
+  //   spaceBetween: 1,
+});
