@@ -1,17 +1,9 @@
 
-
-
-
-.header-body-menu {
-
-}
-
 .header {
-
-   max-width: 375px;
-    margin: 0 auto; 
- 
+max-width: 375px;
+margin: 0 auto; 
 }
+
 .header-container {
 border: 1.50px solid #111;
 border-radius: 0 0 8px 8px;
@@ -24,7 +16,7 @@ align-items: center;
 justify-content: flex-start;
 padding: 18px 20px;
     position: absolute;
- z-index: 100;
+    z-index: 100;
 }
 
 .logo {
@@ -64,7 +56,6 @@ padding: 18px 20px;
 
 .x-cross-btn-svg {
     stroke: black;
-  
 }
 
 /* ======================== */
@@ -75,9 +66,10 @@ background:
 radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
 
 min-width: 375px;
-    display: none; /* ====none====== */
+    display: none;
     flex-direction: column;
 }
+
 .nav-container {
     margin: 0 auto;
     padding: 246px 128px 125px 129px;
@@ -87,11 +79,6 @@ min-width: 375px;
 .nav-mobil {
     display: flex;
     justify-content: center;
-    /* gap: 50px; */
-
-    /* width: 118px;
-    height: 70px; */
-
 
 font-weight: 500;
 font-size: 14px;
@@ -101,7 +88,6 @@ line-height: 1.28571;
 letter-spacing: -0.04em;
 text-transform: uppercase;
 color: #fff;
-
 } 
 
 .nav-item-mobil {
@@ -128,32 +114,12 @@ color: #fff;
 .is-open {
     display: flex;
 }
+
 .is-close {
     display: none;
 }
 
-/* ========== */
-
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-
-
-
-
-
+/* ===================== */
 
 
 
@@ -245,4 +211,4 @@ padding: 19px 24px;
     gap: 8px; 
 }
 
-
+}
