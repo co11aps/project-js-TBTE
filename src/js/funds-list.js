@@ -72,8 +72,6 @@ const markup = fundsList
   )
   .join('');
 
-console.log(markup);
-
 fundsListContainer.insertAdjacentHTML('afterbegin', markup);
 
 const swiper = new Swiper('.mySwiper', {
