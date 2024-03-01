@@ -16,10 +16,18 @@ import { getBooksByCategory } from './js/books-api.js';
 import { getBookInfo } from './js/books-api.js';
 
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
+import { createCategoriesList } from './js/category_home.js';
 
 async function renderMainPageBookList() {
   const data = await getPopularBooks();
   renderHomeBooksMarkup(data);
 }
+
+async function renderMainCategoriesList() {
+  const data = await getCategories();
+  createCategoriesList(data);
+}
+
+renderMainCategoriesList();
 
 renderMainPageBookList();
