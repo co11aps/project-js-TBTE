@@ -1,4 +1,4 @@
-import { document } from "postcss";
+
 
 export default {
   homeLinc: document.querySelector('a.home-link'),
