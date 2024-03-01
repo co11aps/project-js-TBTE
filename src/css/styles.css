@@ -9,8 +9,14 @@
 @import url('./common.css');
 @import url('./fonts.css');
 @import url('./header.css');
-@import url('./modal.css');
+@import url('./shopping-list.css');
+@import url('./modal-window.css');
 @import url('./mobile-menu.css');
+@import url('./block-home-books.css');
+@import url('./category_home.css');
+@import url('./funds-list.css');
+
+
 
 :root {
   font-family: 'DM Sans', sans-serif;

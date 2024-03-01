@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="partials/header.html" />
+    <div class="main-container">
+      <load src="partials/header.html" />
+      <section class="content-container">
+        <div class="side-block">
+          <div class="categories-container">
+            <ul class="categories-list"></ul>
+          </div>
+          <div class="funds-container swiper mySwiper">
+            <div class="funds-list swiper-wrapper">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
 
-    <load src="partials/modal.html" />
+        <div class="main-content">
+          <ul class="main-list"></ul>
+        </div>
+      </section>
+    </div>
     <load src="partials/mobile-menu.html" />
 
     <script type="module" src="./main.js"></script>

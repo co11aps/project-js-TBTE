@@ -9,10 +9,25 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="partials/header.html" />
+    <div class="main-container">
+      <load src="partials/header.html" />
 
-    <section></section>
+      <section class="content-container">
+        <div class="shopping-side-block">
+          <div class="funds-container">
+            <ul class="funds-list"></ul>
+          </div>
+        </div>
 
-    <script type="module" src="./main.js"></script>
+        <div class="main-content">
+          <h1 class="shopping-list-title">
+            Shopping <span class="shopping-list-title-part">List</span>
+          </h1>
+          <ul class="shopping-list"></ul>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./shopping-list.js"></script>
   </body>
 </html>
