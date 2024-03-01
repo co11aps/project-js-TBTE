@@ -1,5 +1,5 @@
 const currentPath = window.location.pathname;
-const homeLinkMob = document.querySelector(".home-link-mob"),
+const homeLinkMob = document.querySelector(".home-link-mob");
 const shoppingListLinkMob = document.querySelector(".shopping-list-link-mob");
 
   // Визначаємо активне посилання для другої навігації
