@@ -1,0 +1,25 @@
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.category-item {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.category-link:hover,
+.category-link:active {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #4f2ee8;
+}
