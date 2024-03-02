@@ -1,10 +1,12 @@
-const currentPath = window.location.pathname;
 const homeLinkMob = document.querySelector(".home-link-mob");
 const shoppingListLinkMob = document.querySelector(".shopping-list-link-mob");
 
-  // Визначаємо активне посилання для другої навігації
-  if (currentPath.includes('index.html')) {
+switch (window.location.href) {
+  case homeLinkMob.href:
     homeLinkMob.classList.add('active-link');
-  } else if (currentPath.includes('shopping-list.html')) {
+    break;
+  case shoppingListLinkMob.href:
     shoppingListLinkMob.classList.add('active-link');
-  }
+    break;
+}
+

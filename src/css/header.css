@@ -1,7 +1,23 @@
 
+.active-link {
+/* border-radius: 36px;
+padding: 7px 16px; */
+
+border-radius: 36px;
+padding: 8px 16px;
+
+background: #eac645;
+}
+
+.dark-body {
+    background-color: #111;
+    border: 1.50px solid #fff;
+}
+
 .header {
 max-width: 375px;
 margin: 0 auto; 
+
 }
 
 .header-container {
@@ -15,8 +31,16 @@ display: flex;
 align-items: center;
 justify-content: flex-start;
 padding: 18px 20px;
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 100;
+}
+
+.lightsvg {
+    display: none;
+}
+.darksvg {
+    display: none;
 }
 
 .logo {
@@ -33,12 +57,16 @@ padding: 18px 20px;
 }
 
 .burger-menu-btn {
-    display: block;
+    
     background-color: transparent;
     border: none;
     margin: 0;
     padding: 0;
     margin-left: 14px;
+}
+
+.btn-active {
+    display: block;
 }
 
 .header-svg-burger {
@@ -103,7 +131,7 @@ color: #fff;
     gap: 4px; 
 } 
 
-.shopping-linc-icon {
+.shopping-link-icon {
     fill: #fff;
 }
 
@@ -165,11 +193,11 @@ gap: 16px;
     gap: 4px; 
 } 
 
-button.burger-menu-btn {
+.burger-menu-btn {
 display: none;
 }
 
-button.x-cross-menu-btn {
+.x-cross-menu-btn {
     display: none;
 }
 
@@ -185,7 +213,7 @@ button.x-cross-menu-btn {
 }
 
 div.backdrop-menu {
-display: none;
+display: none;   /*=====*/
 }
 }
 
