@@ -42,12 +42,22 @@
     width: 24px;
     height: 24px;
     padding: 0;
-    /* border: none; */
+    border: none;
     border-radius: 50%;
 }
 
 .close-button__icon {
     fill: black;
+}
+
+.icon-x-close {
+    stroke: black;
+    transition: stroke 100ms;
+}
+
+.icon-x-close:hover,
+.icon-x-close:focus {
+    stroke: orange;
 }
 
 .modal-book-attributes {
