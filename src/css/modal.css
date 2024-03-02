@@ -1,3 +1,7 @@
+.is-hidden {
+    display: none;
+}
+
 .backdrop-pop-up {
     position: fixed;
 
