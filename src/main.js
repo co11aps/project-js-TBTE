@@ -10,7 +10,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import './js/funds-list.js';
+import './js/supporters.js';
 import './js/scroll-up.js';
 import { getCategories } from './js/books-api.js';
 import { getPopularBooks } from './js/books-api.js';

@@ -1,5 +1,48 @@
+.books-home-title{
+    letter-spacing: -.04em;
+    color: #111;
+    font-family: DM Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 40px;
+}
+.books-home-title-span{
+    color: #4f2ee8;
+}
 .book-wrapper{
-
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.book-item:hover{
+    .book-overlay{
+        top: 78%;
+    }
+}
+.book-info-title{
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.125;
+    text-transform: uppercase;
+    color: #111;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.book-info-author{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: -0.04em;
+    color: #b4afaf;
+}
+.book-item-home{
+    margin-bottom: 40px;
 }
 .book-category-title{
     width: 277px;
@@ -14,6 +57,44 @@
     line-height: 20px;
     color: #B4AFAF;
     ;
+}
+.book-overlay{
+    height: 23%;
+    width: 100%;
+    background: #eac645;
+    padding-top: 13%;
+    transition: all .25s cubic-bezier(.4,0,.2,1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.book-overlay-text{
+    letter-spacing: -.04em;
+    text-align: center;
+    fill: #111;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.see-more-btn{
+    border: 2px solid #4f2ee8;
+    border-radius: 40px;
+    padding: 14px;
+    width: 124px;
+    height: 46px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+
+}
+.see-more-btn:hover,
+.see-more-btn:active{
+    background-color:#4f2ee8;
+    color: #fff;
 }
 .book-item:nth-child(n + 2){
     display: none;
@@ -38,6 +119,12 @@
 
 
 @media screen and (min-width: 768px){
+    .books-home-title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.08333;
+        letter-spacing: 0.02em;
+    }
     .book-item:nth-child(n+2){
         display: list-item;
     }

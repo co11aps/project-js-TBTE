@@ -13,6 +13,9 @@ function templateBookCard({
   return `<li class="book-item" id="${_id}">
                 <div class="book-wrapper">
                 <img class="book-img" src="${book_image}" alt="${title} ${contributor}">
+                <div class="book-overlay">
+                <p class="book-overlay-text">QUICK VIEW</p>
+                </div>
                 </div>
                 <div class="book-info">
                 <p class="book-info-title">${title}</p>
@@ -29,7 +32,7 @@ function templateBookCategoryEl({ books }) {
                     <ul class="books-category-list">` +
     bookCards +
     `</ul>
-                    <button class="button see-more-btn" data-category-home="${bookCategory}">See More</button>
+                    <button class="button see-more-btn" data-category-home="${bookCategory}">SEE MORE</button>
                 </li>`;
   return result;
 }

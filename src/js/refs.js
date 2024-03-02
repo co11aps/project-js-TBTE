@@ -1,6 +1,6 @@
 
 
 export default {
-  homeLinc: document.querySelector('a.home-link'),
-  shoppingListLinc: document.querySelector('a.shopping-list-link'),
+  homeLink: document.querySelector('a.home-link'),
+  shoppingListLink: document.querySelector('a.shopping-list-link'),
 };
