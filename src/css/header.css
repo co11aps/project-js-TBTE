@@ -1,20 +1,19 @@
-
 .header {
-max-width: 375px;
-margin: 0 auto; 
+    max-width: 375px;
+    margin: 0 auto;
 }
 
 .header-container {
-border: 1.50px solid #111;
-border-radius: 0 0 8px 8px;
-width: 375px;
-height: 64px;
+    border: 1.50px solid #111;
+    border-radius: 0 0 8px 8px;
+    width: 375px;
+    height: 64px;
 
-background-color: #fff;
-display: flex;
-align-items: center;
-justify-content: flex-start;
-padding: 18px 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 20px;
     position: absolute;
     z-index: 100;
 }
@@ -61,11 +60,11 @@ padding: 18px 20px;
 /* ======================== */
 
 .backdrop-menu {
-        box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
-background: 
-radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
+    box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
+    background:
+        radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
 
-min-width: 375px;
+    min-width: 375px;
     display: none;
     flex-direction: column;
 }
@@ -73,22 +72,22 @@ min-width: 375px;
 .nav-container {
     margin: 0 auto;
     padding: 246px 128px 125px 129px;
-    
+
 }
 
 .nav-mobil {
     display: flex;
     justify-content: center;
 
-font-weight: 500;
-font-size: 14px;
+    font-weight: 500;
+    font-size: 14px;
 
-line-height: 18px; 
-line-height: 1.28571;
-letter-spacing: -0.04em;
-text-transform: uppercase;
-color: #fff;
-} 
+    line-height: 18px;
+    line-height: 1.28571;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #fff;
+}
 
 .nav-item-mobil {
     display: flex;
@@ -100,8 +99,8 @@ color: #fff;
 .shopping-list-link-mob {
     display: flex;
     align-items: center;
-    gap: 4px; 
-} 
+    gap: 4px;
+}
 
 .shopping-linc-icon {
     fill: #fff;
@@ -125,90 +124,95 @@ color: #fff;
 
 @media screen and (min-width: 768px) {
     .header {
-    max-width: 768px
+        max-width: 768px
     }
 
     .header-container {
-    width: 768px;
-    height: 72px;
-    padding: 22px 32px;
-}
+        width: 768px;
+        height: 72px;
+        padding: 22px 32px;
+    }
 
-.logo {
-    margin-right: 40px;
-}
+    .logo {
+        margin-right: 40px;
+    }
 
-.nav {
-    display: flex;
-    margin-right: auto;
+    .nav {
+        display: flex;
+        margin-right: auto;
 
 
-font-weight: 500;
-font-size: 14px;
+        font-weight: 500;
+        font-size: 14px;
 
-line-height: 18px; 
-line-height: 1.28571;
-letter-spacing: -0.04em;
-text-transform: uppercase;
-color: #111;
-}
+        line-height: 18px;
+        line-height: 1.28571;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: #111;
+    }
 
-.nav-list {
-    display: flex;
-align-items: center;
-gap: 16px;
-}
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
 
-.shopping-list-link {
-    display: flex;
-    align-items: center;
-    gap: 4px; 
-} 
+    .shopping-list-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
 
-button.burger-menu-btn {
-display: none;
-}
+    button.burger-menu-btn {
+        display: none;
+    }
 
-button.x-cross-menu-btn {
-    display: none;
-}
+    button.x-cross-menu-btn {
+        display: none;
+    }
 
-.shopping-linc-icon {
-    fill: #111;
-}
+    .shopping-linc-icon {
+        fill: #111;
+    }
 
-.active-link {
+    .active-link {
+        background-color: #eac645;
+        ;
+        padding: 4 px 8px;
+        border-radius: 36px;
 
-}
-.nav-mobil {
-    display: none;
-}
+    }
 
-div.backdrop-menu {
-display: none;
-}
+    .nav-mobil {
+        display: none;
+    }
+
+    div.backdrop-menu {
+        display: none;
+    }
 }
 
 
 @media screen and (min-width: 1440px) {
-.header {
-    max-width: 1440px;
-}
+    .header {
+        max-width: 1440px;
+    }
 
-.header-container {
-width: 1440px;
-height: 72px;
-padding: 19px 24px;
-}
+    .header-container {
+        width: 1440px;
+        height: 72px;
+        padding: 19px 24px;
+    }
 
-.logo {
-    margin-right: 76px;
-}
+    .logo {
+        margin-right: 76px;
+    }
 
 
 
-.shopping-list-link {
-    gap: 8px; 
-}
+    .shopping-list-link {
+        gap: 8px;
+    }
 
 }
