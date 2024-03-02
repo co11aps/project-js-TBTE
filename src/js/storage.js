@@ -1,7 +1,6 @@
 const STORAGE_KEY = 'storage-of-books';
 
-const shoppingList =
-  JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+const shoppingList = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
 function addToStorage(book) {
   shoppingList.push(book);
@@ -21,10 +20,7 @@ function handleBookInStorage(data) {
     );
 
     shoppingList.splice(bookIndex, 1);
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(shoppingList)
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(shoppingList));
     refs.addBtnEL.textContent = 'Add to shopping list';
     modalMessage.remove();
     return;
@@ -33,4 +29,4 @@ function handleBookInStorage(data) {
   addToStorage(data);
   refs.addBtnEL.textContent = 'Remove from the shopping list';
   refs.addBtnEL.after(modalMessage);
-}  
+}
