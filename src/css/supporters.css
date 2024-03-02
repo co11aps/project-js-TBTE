@@ -1,0 +1,67 @@
+/* .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* body {
+    position: relative;
+} */
+
+.funds-container {
+
+    padding: 24px 40px;
+}
+
+.funds-list {}
+
+.swiper-wrapper {}
+
+.funds-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.16667;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.swiper-slide {
+    height: 32px;
+    width: 159px;
+}
+
+.fund-logo {
+    /* filter: brightness(0) invert(1); */
+}
+
+.ukraine-logo {
+    fill: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .funds-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+}
