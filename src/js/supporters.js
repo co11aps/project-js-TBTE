@@ -60,13 +60,13 @@ const fundsList = [
 ];
 
 // onclick="event.preventDefault()
-const fundsListContainer = document.querySelector('.mySwiper');
+const fundsListContainer = document.querySelector('.swiper-wrapper');
 
 const markup = fundsList
   .map(
     ({ url, img }) => `<div class="swiper-slide">
   <a class="fund-link" href="${url}" target=blank">
-     <img src="${img}" />
+     <img class="fund-logo" src="${img}" />
   </a>
 </div>`
   )
@@ -80,6 +80,5 @@ const swiper = new Swiper('.mySwiper', {
     prevEl: '.swiper-button-prev',
   },
   direction: 'vertical',
-  //   slidesPerView: 2,
-  //   spaceBetween: 1,
+  slidesPerView: 6,
 });
