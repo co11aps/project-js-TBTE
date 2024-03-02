@@ -16,56 +16,12 @@
   color: #4f2ee8;
 }
 
-.empty-message {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 265px;
-  gap: 14px;
-}
-
-.empty-message img {
-  width: 100%;
-  height: 100%;
-}
-
-.empty-message p {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: -0.02em;
-  text-align: center;
-  width: 244px;
-  height: 36px;
-  margin-top: 14px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
 @media screen and (min-width: 768px) {
   .shopping-list-title {
     font-size: 48px;
   }
-
-  .empty-message p {
-    position: fixed;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.02em;
-    text-align: center;
-    width: 244px;
-    height: 36px;
-    display: flex;
-  }
-  .empty-message {
-    width: 349px;
-    height: 309px;
-    top: 304px;
-    left: 210px;
-    gap: 20px;
-    position: fixed;
-  }
 }
+
 @media screen and (min-width: 1440px) {
   .shopping-side-block {
     display: flex;
