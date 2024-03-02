@@ -58,12 +58,12 @@ function createBookCard(book) {
   const card = document.createElement('div');
   card.classList.add('book-card');
   card.innerHTML = `
-    <img class="book-cover" src="${book.cover}" alt="Book Cover" />
+    <img class="book-cover" src="${book.image}" alt="${title} ${contributor}" />
     <div class="book-details">
       <h2 class="book-title">${book.title}</h2>
-      <p class="book-category">${book.category}</p>
-      <p class="book-description">${book.description}</p>
-      <p class="book-author">${book.author}</p>
+      <p class="book-category">${bookCategory}</p>
+      <p class="book-description">${title}</p>
+      <p class="book-author">${author}</p>
       <div class="book-links">
         ${createMarketplaceLinks(book.marketplaces)}
       </div>
