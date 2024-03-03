@@ -42,7 +42,7 @@ export function handleBookInStorage(data) {
 
   refs.addBtnEL.textContent = 'Remove from the shopping list';
   refs.addBtnEL.after(modalMessage);
-}
+
 
   document.querySelector('.modal-pop-up-btn').textContent = 'Remove from the shopping list';
   document.querySelector('.modal-pop-up-btn').after(modalMessage);
