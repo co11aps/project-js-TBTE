@@ -1,5 +1,5 @@
 let bookCategory;
-const mainContainer = document.querySelector('.main-content');
+export const mainContainer = document.querySelector('.main-content');
 
 function templateBookCard({
   _id,
