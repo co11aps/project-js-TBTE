@@ -24,6 +24,7 @@ import './js/mobile-menu.js';
 import './js/buttom-switch.js';
 import './js/dark-theme.js';
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
+import { showError } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
 import './js/selected_category.js';
 import { categoriesList } from './js/category_home.js';
@@ -31,16 +32,26 @@ import { onCategoryClick } from './js/selected_category.js';
 
 async function renderMainPageBookList() {
   loaderOn();
-  const data = await getPopularBooks();
+  try{
+    const data = await getPopularBooks();
+    renderHomeBooksMarkup(data);
+  }
+  catch(err){
+    showError(err);
+  }
   loaderOff();
-  renderHomeBooksMarkup(data);
 }
 
 async function renderMainCategoriesList() {
   loaderOn();
-  const data = await getCategories();
+  try{
+    const data = await getCategories();
+    createCategoriesList(data);
+  }
+  catch(err){
+    showError(err);
+  }
   loaderOff();
-  createCategoriesList(data);
 }
 
 categoriesList.addEventListener('click', onCategoryClick);

@@ -1,3 +1,4 @@
+import iziToast from 'izitoast';
 let bookCategory;
 export const mainContainer = document.querySelector('.main-content');
 
@@ -52,3 +53,10 @@ export function renderHomeBooksMarkup(dataPopularBooks) {
   const markup = templateHomeBookMarkup(dataPopularBooks);
   mainContainer.innerHTML = markup;
 }
+
+export function showError(msg) {
+  iziToast.error({
+      title: 'Error',
+      message: msg,
+      });
+  };
