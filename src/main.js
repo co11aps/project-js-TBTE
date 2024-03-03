@@ -22,6 +22,7 @@ import { loaderOff } from './js/preloader.js';
 import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/buttom-switch.js';
+import './js/dark-theme.js';
 
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
