@@ -29,7 +29,6 @@ import './js/selected_category.js';
 import { categoriesList } from './js/category_home.js';
 import { onCategoryClick } from './js/selected_category.js';
 
-import { renderHomeBooksMarkup } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
 
 async function renderMainPageBookList() {
