@@ -1,33 +1,101 @@
 .shopping-side-block {
-    display: none;
+  display: none;
 }
 
 .shopping-list-title {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.1875;
-    letter-spacing: -0.04em;
-    color: #111;
-    margin-bottom: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1875;
+  letter-spacing: -0.04em;
+  color: #111;
+  margin-bottom: 40px;
 }
 
 .shopping-list-title-part {
-    color: #4f2ee8;
+  color: #4f2ee8;
+}
+.empty-message {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.empty-message p {
+  width: 244px;
+  letter-spacing: -0.02em;
+  color: #0009;
+  margin: 120px auto auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.empty-message img {
+  width: 265px;
+  margin-top: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.book-cover {
+  width: 100%;
+  border: 2px solid #4f2ee866;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+}
+
+.book-description {
+  letter-spacing: -0.04em;
+  color: var(--main-text-cl-light-theme);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.book-links {
+  gap: 16px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }
 
 @media screen and (min-width: 768px) {
+  .shopping-list-title {
+    font-size: 48px;
+  }
 
-    .shopping-list-title {
-        font-size: 48px;
-    }
+  .empty-message p {
+    width: 349px;
+    margin-top: 140px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .empty-message img {
+    width: 349px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .shopping-side-block {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+  }
 
-    .shopping-side-block {
-        display: flex;
-        flex-direction: column;
-        gap: 86px;
-    }
+  .empty-message {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .empty-message p {
+    width: 349px;
+    margin-top: 140px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .empty-message img {
+    width: 349px;
+  }
 }
