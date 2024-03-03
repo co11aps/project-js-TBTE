@@ -12,12 +12,14 @@ export async function getPopularBooks() {
   return response.data;
 }
 export async function getBooksByCategory(selectedCategory) {
+  selectedCategory = selectedCategory.trim();
   const params = { category: selectedCategory };
   const URL = `${BASE}/category`;
   const response = await axios.get(URL, { params });
   return response.data;
 }
 export async function getBookInfo(bookId) {
+  bookId = bookId.trim();
   const URL = `${BASE}/${bookId}`;
   const response = await axios.get(URL);
   return response.data;
