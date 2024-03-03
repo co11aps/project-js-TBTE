@@ -107,12 +107,13 @@
 .book-item{
     width: 335px;
     height: 535px;
+    cursor: pointer;
 }
 .books-category-list{
     display: flex;
 }
 
-
+  
 
 
 
