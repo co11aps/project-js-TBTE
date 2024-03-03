@@ -1,18 +1,14 @@
-.main-content {
-    margin-top: 72px;
- }
-
- .block_books-list {
+.block_books-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 75px;
     cursor: pointer;
- }
+}
 
 
- .block_books-title {
+.block_books-title {
     margin-bottom: 40px;
 
     @media screen and (max-width: 767px) {

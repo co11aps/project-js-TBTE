@@ -34,26 +34,20 @@ button.swiper-button-prev {
 }
  */
 
-.swiper-button-prev,
-.swiper-button-next {
-    position: absolute;
-    /* Абсолютное позиционирование */
-    top: 10%;
-    /* Положение от верхнего края */
-    transform: translateY(-50%);
-    /* Центрирование по вертикали */
-    z-index: 10;
-    /* Позволяет кнопкам находиться поверх других элементов */
-}
-
-.swiper-button-prev {
-    left: 500px;
-    /* Расположение слева */
-}
-
-.swiper-button-next {
-    right: 100px;
-    /* Расположение справа */
+.next-btn {
+    cursor: pointer;
+    width: 32px;
+    min-height: 32px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    transition: transform .5s ease-in-out;
+    display: flex;
+    transform: rotateX(0);
 }
 
 .swiper-slide {
