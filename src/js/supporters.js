@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 
 import saveTheChildren from '../images/funds-logo/save-the-children.png';
 import projectHope from '../images/funds-logo/project-hope.png';
@@ -65,7 +67,7 @@ const fundsListContainer = document.querySelector('.swiper-wrapper');
 const markup = fundsList
   .map(
     ({ url, img }) => `<div class="swiper-slide">
-  <a class="fund-link" href="${url}" target=blank">
+  <a class="fund-link" href="${url}" target="blank" rel="noopener noreferrer nofollow">
      <img class="fund-logo" src="${img}" />
   </a>
 </div>`
@@ -75,10 +77,13 @@ const markup = fundsList
 fundsListContainer.insertAdjacentHTML('afterbegin', markup);
 
 const swiper = new Swiper('.mySwiper', {
+  modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   direction: 'vertical',
   slidesPerView: 6,
+  slidesPerGroup: 6,
+  spaceBetween: 10,
 });

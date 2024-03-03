@@ -23,6 +23,11 @@ import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/buttom-switch.js';
 import './js/dark-theme.js';
+import { renderHomeBooksMarkup } from './js/block-home-books.js';
+import { createCategoriesList } from './js/category_home.js';
+import './js/selected_category.js';
+import { categoriesList } from './js/category_home.js';
+import { onCategoryClick } from './js/selected_category.js';
 
 import { renderHomeBooksMarkup } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
@@ -40,6 +45,8 @@ async function renderMainCategoriesList() {
   loaderOff();
   createCategoriesList(data);
 }
+
+categoriesList.addEventListener('click', onCategoryClick);
 
 renderMainCategoriesList();
 
