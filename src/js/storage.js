@@ -1,10 +1,7 @@
 export const STORAGE_KEY = 'storage-of-books';
 
-
-const temporaryShoppingList = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-
 export const shoppingList =
-
+  JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
 export function addToStorage(book) {
   shoppingList.push(book);
@@ -24,27 +21,16 @@ export function handleBookInStorage(data) {
     );
 
     shoppingList.splice(bookIndex, 1);
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(temporaryShoppingList));
-    refs.addBtnEL.textContent = 'Add to shopping list';
-
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify(shoppingList)
     );
     document.querySelector('.modal-pop-up-btn').textContent = 'Add to shopping list';
-
     modalMessage.remove();
     return;
   }
 
   addToStorage(data);
-
-  refs.addBtnEL.textContent = 'Remove from the shopping list';
-  refs.addBtnEL.after(modalMessage);
-}
-
   document.querySelector('.modal-pop-up-btn').textContent = 'Remove from the shopping list';
   document.querySelector('.modal-pop-up-btn').after(modalMessage);
 }  
-
