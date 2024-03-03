@@ -8,8 +8,8 @@
     <title>Shopping list</title>
     
     <script type="module" crossorigin src="/project-js-TBTE/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/buttom-switch-7aa7b941.js">
-    <link rel="stylesheet" href="/project-js-TBTE/assets/buttom-switch-c48241fc.css">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/mobile-menu-60b14376.js">
+    <link rel="stylesheet" href="/project-js-TBTE/assets/mobile-menu-c48241fc.css">
   </head>
   <body>
     <div class="main-container">
@@ -42,7 +42,10 @@
 
       <div class="checkbox">
         <!-- light -->
-        <button class="button">button</button>
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
 
       </div>
 

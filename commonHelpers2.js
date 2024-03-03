@@ -1,4 +1,4 @@
-import"./assets/buttom-switch-7aa7b941.js";const n="storage-of-books";JSON.parse(localStorage.getItem(n));const c="storage-of-books",r=document.querySelector(".shopping-list"),s=document.createElement("div");s.classList.add("empty-message");s.innerHTML=`
+import"./assets/mobile-menu-60b14376.js";const n="storage-of-books";JSON.parse(localStorage.getItem(n));const c="storage-of-books",r=document.querySelector(".shopping-list"),s=document.createElement("div");s.classList.add("empty-message");s.innerHTML=`
   <p>This page is empty, add some books and proceed to order.</p>
   <img src="images/books-stack-mobile.png" alt="Empty Book Stack" />
 `;async function i(){try{return await new Promise((e,t)=>{const a=localStorage.getItem(c);e(a?JSON.parse(a):[])})}catch(o){throw console.error("Error getting stored books:",o),o}}async function d(){try{const o=await i();r.innerHTML="",o.length>0?o.forEach(e=>{const t=document.createElement("li");t.appendChild(l(e)),r.appendChild(t)}):r.appendChild(s)}catch(o){console.error("Error rendering books:",o)}}function l(o){const e=document.createElement("div");return e.classList.add("book-card"),e.innerHTML=`
