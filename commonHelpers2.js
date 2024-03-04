@@ -1,4 +1,4 @@
-import"./assets/mobile-menu-2f86df1f.js";const d="storage-of-books";JSON.parse(localStorage.getItem(d));const g="/project-js-TBTE/assets/books-stack-mobile-487658af.png",c="/project-js-TBTE/assets/books-stack-a8e7c57b.png",i="storage-of-books",a=document.querySelector(".shopping-list"),r=document.createElement("div");r.classList.add("empty-message");r.innerHTML=`
+import"./assets/mobile-menu-d58d6804.js";const d="storage-of-books";JSON.parse(localStorage.getItem(d));const g="/project-js-TBTE/assets/books-stack-mobile-487658af.png",c="/project-js-TBTE/assets/books-stack-a8e7c57b.png",i="storage-of-books",a=document.querySelector(".shopping-list"),r=document.createElement("div");r.classList.add("empty-message");r.innerHTML=`
   <p>This page is empty, add some books and proceed to order.</p>
   <img 
     class="book-stack-image"
