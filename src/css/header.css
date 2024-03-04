@@ -1,47 +1,60 @@
 
 .active-link {
-border-radius: 36px;
-padding: 8px 16px;
-font-weight: 700;
-background: #eac645;
+  border-radius: 36px;
+  padding: 8px 16px;
+
+  background: #eac645;
+}
+
+.dark-body {
+  background-color: #111;
+  border: 1.5px solid #fff;
 }
 
 
 .header {
-max-width: 375px;
-margin: 0 auto; 
-
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .header-container {
-border: 1.50px solid #111;
-border-radius: 0 0 8px 8px;
-width: 375px;
-height: 64px;
+  border: 1.5px solid #111;
+  border-radius: 0 0 8px 8px;
+  width: 375px;
+  height: 64px;
 
-background-color: #fff;
-display: flex;
-align-items: center;
-justify-content: flex-start;
-padding: 18px 20px;
-    position: fixed;
-    top: 0;
-    z-index: 100;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 18px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
+
+.lightsvg {
+  display: none;
+}
+.darksvg {
+  display: none;
+}
+
+
 .logo {
-    margin-right: 144px;
-    padding: 0;
+  margin-right: 144px;
+  padding: 0;
 }
 
 .nav {
-    display: none;
+  display: none;
 }
 
 
 /* ========= checkbox =============== */
 .checkbox {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
@@ -133,184 +146,198 @@ input:checked + .slider:before {
 /* ========== checkbox-end =========== */
 
 .burger-menu-btn {
-    
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 14px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 14px;
 }
 
 .btn-active {
-    display: block;
+  display: block;
 }
 
 .header-svg-burger {
-    stroke: black;
+  stroke: black;
 }
 
 .x-cross-menu-btn {
-    display: none;
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 14px;
+  display: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 14px;
 }
 
 .x-cross-btn-svg {
-    stroke: black;
+  stroke: black;
 }
 
 /* ======================== */
 
 .backdrop-menu {
-    box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
-    background:
-        radial-gradient(189.32% 190.93% at 59.76% -23.42%, rgb(79, 46, 232) 18.02733987569809%, rgb(255, 255, 255) 100%);
+  box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
+  background: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    rgb(79, 46, 232) 18.02733987569809%,
+    rgb(255, 255, 255) 100%
+  );
 
-    min-width: 375px;
-    display: none;
-    flex-direction: column;
+  min-width: 375px;
+  display: none;
+  flex-direction: column;
 }
 
 .nav-container {
-    margin: 0 auto;
-    padding: 246px 128px 125px 129px;
+
+  margin: 0 auto;
+  padding: 246px 128px 125px 129px;
 }
 
 .nav-mobil {
+  display: flex;
+  justify-content: center;
+
+    margin: 0 auto;
+    padding: 246px 128px 125px 129px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 156px;
     height: 70px;
 
-    font-weight: 500;
-    font-size: 14px;
 
-    line-height: 18px;
-    line-height: 1.28571;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+
+  line-height: 18px;
+  line-height: 1.28571;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .nav-item-mobil {
-    margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
 }
 
 .shopping-list-link-mob {
-    display: flex;
-    align-items: center; 
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+    margin-bottom: 17px;
+
 }
 
 .shopping-link-icon {
-    fill: #fff;
+  fill: #fff;
 }
 
 .burger-menu-photo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .is-open {
-    display: flex;
+  display: flex;
 }
 
 .is-close {
-    display: none;
+  display: none;
 }
 
 /* ===================== */
 
-
-
 @media screen and (min-width: 768px) {
-    .header {
-        max-width: 768px
-    }
+  .header {
+    max-width: 768px;
+  }
 
-    .header-container {
-        width: 768px;
-        height: 72px;
-        padding: 22px 32px;
-    }
+  .header-container {
+    width: 768px;
+    height: 72px;
+    padding: 22px 32px;
+  }
 
-    .logo {
-        margin-right: 40px;
-    }
-
-    .nav {
-        display: flex;
-        margin-right: auto;
+  .logo {
+    margin-right: 40px;
+  }
 
 
-        font-weight: 500;
-        font-size: 14px;
+  .nav {
+    display: flex;
+    margin-right: auto;
 
-        line-height: 18px;
-        line-height: 1.28571;
-        letter-spacing: -0.04em;
-        text-transform: uppercase;
-        color: #111;
-    }
-
-    .nav-list {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .shopping-list-link {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
-
-.burger-menu-btn {
-display: none;
-}
-
-.x-cross-menu-btn {
-    display: none;
-}
-
+    font-weight: 500;
+    font-size: 14px;
+  }
     .shopping-link-icon {
         fill: #111;
     }
 
     .active-link {
-        
+    line-height: 18px;
+    line-height: 1.28571;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #111;
+  }
 
-    }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 
-div.backdrop-menu {
-display: none;   /*=====*/
+  .shopping-list-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .burger-menu-btn {
+    display: none;
+  }
+
+  .x-cross-menu-btn {
+    display: none;
+  }
+
+  .shopping-linc-icon {
+    fill: #111;
+  }
+
+  .active-link {
+    background-color: #eac645;
+    padding: 4 px 8px;
+    border-radius: 36px;
+  }
+
+  div.backdrop-menu {
+    display: none; /*=====*/
+  }
 }
-
-}
-
 
 @media screen and (min-width: 1440px) {
-    .header {
-        max-width: 1440px;
-    }
+  .header {
+    max-width: 1440px;
+  }
 
-    .header-container {
-        width: 1440px;
-        height: 72px;
-        padding: 19px 24px;
-    }
+  .header-container {
+    width: 1440px;
+    height: 72px;
+    padding: 19px 24px;
+  }
 
-    .logo {
-        margin-right: 76px;
-    }
+  .logo {
+    margin-right: 76px;
+  }
 
-
-
-    .shopping-list-link {
-        gap: 8px;
-    }
-
+  .shopping-list-link {
+    gap: 8px;
+  }
 }
