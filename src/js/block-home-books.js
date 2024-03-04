@@ -25,7 +25,7 @@ function templateBookCard({
             </li>`;
 }
 
-function templateBookCategoryEl({ books }) {
+export function templateBookCategoryEl({ books }) {
   const bookCards = books.map(templateBookCard).join('');
   const result =
     `<li class="book-item-home">
@@ -33,7 +33,7 @@ function templateBookCategoryEl({ books }) {
                     <ul class="books-category-list">` +
     bookCards +
     `</ul>
-                    <button class="button see-more-btn" data-category-home="${bookCategory}">SEE MORE</button>
+                    <button class="button see-more-btn" data-js="${bookCategory}">SEE MORE</button>
                 </li>`;
   return result;
 }
