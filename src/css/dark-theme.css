@@ -1,0 +1,48 @@
+/* ================ LIGHT  ================= */
+
+.light {
+
+--main-color-primary: #fff;
+  /* background-color: #fff;   background-color: var(--main-color-primary);*/
+
+--color-accent-icon-dark: black;
+/* stroke: black;  stroke: var(--color-accent-icon-dark);*/
+
+--font-color-main-text: #fff;
+  /* color: #fff;   color: var(--font-color-main-text);*/
+
+--font-color-main-header: #111;
+  /* color: #111;   color: var(--font-color-main-header);*/
+
+
+--color-accent-icon-light: #fff;
+/* stroke: #fff;  stroke: var(--color-accent-icon-light);*/
+
+--color-accent-icon-dark: #111;
+/* stroke: #111;  stroke: var(--color-accent-icon-dark);*/
+
+
+}
+
+
+
+/* ================ DARK  ================= */
+
+.dark {
+--main-color-primary:  #111;
+  /* background-color: #111;   background-color: var(--main-color-primary);*/
+
+--color-accent-icon-fill: #fff;
+/* stroke: var(--color-accent-icon-stroke);  */
+
+--font-color-main-text: rgba(255, 255, 255, 0.6);
+
+--font-color-main-header: #fff;
+
+--color-accent-icon-light: #fff;
+/* stroke: #fff;  stroke: var(--color-accent-icon-light);*/
+
+--color-accent-icon-dark: black;
+/* stroke: black;  stroke: var(--color-accent-icon-dark);*/
+
+}

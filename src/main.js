@@ -29,6 +29,7 @@ import { createCategoriesList } from './js/category_home.js';
 import './js/selected_category.js';
 import { categoriesList } from './js/category_home.js';
 import { onCategoryClick } from './js/selected_category.js';
+import './js/dark-theme.js';
 
 import { onSeeMoreClick } from './js/selected_category.js';
 import { mainContainer } from './js/block-home-books.js';
@@ -58,6 +59,7 @@ async function renderMainCategoriesList() {
 }
 
 categoriesList.addEventListener('click', onCategoryClick);
+mainContainer.addEventListener('click', onSeeMoreClick);
 
 renderMainCategoriesList();
 

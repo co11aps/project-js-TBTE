@@ -1,4 +1,7 @@
 import iziToast from 'izitoast';
+import { loaderOn } from './preloader.js';
+import { loaderOff } from './preloader.js';
+import { getPopularBooks } from './books-api.js';
 let bookCategory;
 export const mainContainer = document.querySelector('.main-content');
 
@@ -60,3 +63,14 @@ export function showError(msg) {
       message: msg,
       });
   };
+async function renderMainPageBookList() {
+  loaderOn();
+  try {
+    const data = await getPopularBooks();
+    renderHomeBooksMarkup(data);
+  } catch (err) {
+    showError(err);
+  }
+  loaderOff();
+}
+renderMainPageBookList();

@@ -1,20 +1,24 @@
 import { getBookInfo } from './books-api';
 import { showError } from './block-home-books';
-import { modalClose } from './modal';
+import amazonLogo from '../images/amazon-logo.png';
+import appleBooksLogo from '../images/apple-books-logo.png';
+
 const booksContainer = document.querySelector('.main-content');
 const modalWindow = document.querySelector('.backdrop-pop-up');
 const modalWindowContent = document.querySelector('.modal-pop-up-content');
 const body = document.querySelector('body');
-let modalBookid;
+let modalBookEl;
 booksContainer.addEventListener('click', onBooksContainerClick);
 
 async function onBooksContainerClick(e) {
-  modalBookid = e.target.closest('.book-item').id;
-  if (modalBookid) {
+  modalBookEl = e.target.closest('.book-item');
+  modalWindowContent.innerHTML = '';
+  if (modalBookEl) {
     modalWindow.classList.remove('is-hidden');
-    modalClose();
+    body.classList.add('no-scroll');
     try {
-      let bookInfo = await getBookInfo(modalBookid);
+      let modalBookId = modalBookEl.id;
+      let bookInfo = await getBookInfo(modalBookId);
       renderBookInfoModal(bookInfo);
     } catch (err) {
       showError(err);
@@ -39,12 +43,12 @@ function templateBookInfoModal({
                 <ul class="modal-shops">
                     <li class="modal-shop">
                         <a href="${buy_links[0].url}" target="_blank" class="modal-shop-link">
-                            <img class="book-shop" src="../images/amazon-logo.png" alt="Shop Logo">
+                            <img class="book-shop" src="${amazonLogo}" alt="Shop Logo">
                         </a>
 
                     <li class="modal-shop">
                         <a href="${buy_links[1].url}" target="_blank" class="modal-shop-link">
-                            <img class="book-shop" src="../images/apple-books-logo.png" alt="Shop Logo">
+                            <img class="book-shop" src="${appleBooksLogo}" alt="Shop Logo">
                         </a>
                 </ul>
             </div>`;
