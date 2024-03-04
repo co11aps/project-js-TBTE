@@ -37,5 +37,6 @@ document.getElementById('slider').addEventListener('change', toggleTheme);
               // iconUse.setAttribute('href', './images/icons.svg#icon-logo');
             }
 }
- checkboxCheck()
+
+checkboxCheck();
 
