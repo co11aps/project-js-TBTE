@@ -8,7 +8,8 @@ import { getPopularBooks } from "./books-api";
 import { renderHomeBooksMarkup } from "./block-home-books";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
+import { templateBookCategoryEl } from "./block-home-books";
+import { showError } from './block-home-books.js';
 
 export async function currentCategoryTogle(value) {
     await document.querySelector('.js-current-category').classList.remove(`js-current-category`);
@@ -18,16 +19,10 @@ export async function currentCategoryTogle(value) {
 
 export async function onCategoryClick(el) {
   el.preventDefault();
-  console.log(el.target.dataset.category);
 
   if (el.target.classList.contains("category-item")) {
-    // scrollToStart();
+
     mainContainer.innerHTML = "";
-    // refBooks.insertAdjacentHTML(
-    //   'afterbegin',
-    //   addMarkupOfPreloader()
-    // );
-    
     currentCategoryTogle(el.target.dataset.category);
 
     if (el.target.dataset.category === `all categories`) {
@@ -38,42 +33,22 @@ export async function onCategoryClick(el) {
         currentCategoryTogle(el.target.dataset.category);
         loaderOff();
       } catch (err) {
-        iziToast.error({
-            title: 'Error:',
-            message: "Books was not found",
-          });
+        showError(err);
       };
       return;
     } else {
       try {
         const data = (await getBooksByCategory(`${el.target.dataset.category}`));
-        // .find((item) => item.list_name === el.target.dataset.category);
-        console.log(data);
         mainContainer.innerHTML = (await makeCategoryPage(`${el.target.dataset.category}`, data));
         currentCategoryTogle(el.target.dataset.category);
         loaderOff();
       } catch (err) {
-        iziToast.error({
-            title: 'Error:',
-            message: "Books was not found",
-          });
+        showError(err);
       };
     }
   };
 };
 
-// export async function murkup(data) {
-
-//     return await Promise.all(data.map(async ({ list_name, books }) => {
-//       return ` 
-//       <div class="item-books__home"> 
-//       <h3 class="js-book-categoty">${list_name}</h3> 
-//       <ul class='list-books__home'>${await makeListOfBooks(books)}</ul>  
-//       <button class="button see-more" data-js="${list_name}" aria-label="See more">See more</button> 
-//       </div> 
-//       `;
-//     }));
-//   }
   
   export async function makeCategoryPage(category, data) {
   
@@ -111,54 +86,41 @@ export async function onCategoryClick(el) {
   };
   
 
-// refBooks.addEventListener('click', onSeeMoreClick);
+ 
 
-// async function onSeeMoreClick(event) {
-//   event.preventDefault();
-//   const currentEl = event.target.closest('.books__itm');
-//   if (currentEl) {
-//     const bookId = currentEl.attributes.id.value;
-//     modalAboutBook(bookId);
-//   }
+export async function onSeeMoreClick(event) {
+  event.preventDefault();
+  // const currentEl = event.target.closest('.book-item');
+  // if (currentEl) {
+  //   const bookId = currentEl.attributes.id.value;
+  //   // modalAboutBook(bookId);
+  // }
 
-//   if (event.target.classList.contains('see-more')) {
-//     scrollToStart();
-//     const requestedCategory = event.target.dataset.js;
-//     refBooks.innerHTML = '';
-//     refBooks.insertAdjacentHTML('afterbegin', addMarkupOfPreloader());
-//     startPreloader();
-//     try {
-//       const data = await (
-//         await bookApi.getOneCategory(`${requestedCategory}`)
-//       ).data;
-//       refBooks.insertAdjacentHTML(
-//         'beforeend',
-//         await makeCategoryPage(`${requestedCategory}`, data)
-//       );
-//       currentCategoryTogle(`${requestedCategory}`);
-//       stopPreloader();
-//     } catch (error) {
-//       Notiflix.Notify.failure(`Books was not found : ${error.message}`);
-//     }
-//   } else if (event.target.classList.contains('all-categories__btn')) {
-//     scrollToStart();
-//     refBooks.innerHTML = '';
-//     refBooks.insertAdjacentHTML('afterbegin', addMarkupOfPreloader());
-//     startPreloader();
-//     try {
-//       const resp = await bookApi.getTopBooks();
-//       refBooks.insertAdjacentHTML(
-//         'afterbegin',
-//         '<h2 class="block__books-title">Best Sellers<span class="block__books-colortitle"> Books</span></h2>'
-//       );
-//       refBooks.insertAdjacentHTML(
-//         'beforeend',
-//         (await murkup(resp.data)).join('')
-//       );
-//       stopPreloader();
-//       currentCategoryTogle("all categories");
-//     } catch (error) {
-//       Notiflix.Notify.failure(`Books was not found : ${error.message}`);
-//     }
-//   }
-// };
+  if (event.target.classList.contains('see-more-btn')) {
+    const requestedCategory = event.target.dataset.js;
+    mainContainer.innerHTML = '';
+    loaderOn();
+    try {
+      const data = (await getBooksByCategory(`${requestedCategory}`));
+      mainContainer.insertAdjacentHTML(
+        'beforeend',
+        await makeCategoryPage(`${requestedCategory}`, data)
+      );
+      currentCategoryTogle(`${requestedCategory}`);
+      loaderOff();
+    } catch (err) {
+      showError(err);
+    }
+  } else if (event.target.classList.contains('all-categories_btn')) {
+    mainContainer.innerHTML = ""; 
+    try {
+      const response = (await getPopularBooks());
+      loaderOn();
+      renderHomeBooksMarkup(response);
+      currentCategoryTogle("all categories");
+      loaderOff();
+    } catch (err) {
+      showError(err);
+    }
+  }
+};
