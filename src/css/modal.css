@@ -41,6 +41,10 @@
   border-radius: 18px;
 }
 
+.dark .modal-pop-up {
+  background-color: var(--main-color-maim);
+}
+
 .close-button {
   background-color: transparent;
   position: absolute;
@@ -63,6 +67,10 @@
 .icon-x-close {
   stroke: black;
   transition: stroke 100ms;
+}
+
+.dark .icon-x-close {
+  stroke: white;
 }
 
 .icon-x-close:hover,
@@ -91,6 +99,10 @@
   margin-top: 10px;
 }
 
+.dark .modal-book-title {
+  color: white;
+}
+
 .modal-book-author {
   margin-bottom: 18px;
   font-style: italic;
@@ -100,12 +112,20 @@
   color: #b4afaf;
 }
 
+.dark .modal-book-author {
+  color: white;
+}
+
 .modal-book-desc {
   margin-bottom: 14px;
   color: #111;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.04em;
+}
+
+.dark .modal-book-desc {
+  color: white;
 }
 
 .modal-shops {
@@ -173,6 +193,11 @@
   transition-timing-function: ease-in-out;
   position: relative;
   overflow: hidden;
+}
+
+.dark .modal-pop-up-btn {
+  background-color: var(--main-color-maim);
+  color: white;
 }
 
 .modal-pop-up-btn:hover,
