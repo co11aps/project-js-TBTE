@@ -74,7 +74,7 @@ const markup = fundsList
   )
   .join('');
 
-fundsListContainer.insertAdjacentHTML('afterbegin', markup);
+fundsListContainer.innerHTML = markup;
 
 const swiperOptions = {
   modules: [Navigation],
