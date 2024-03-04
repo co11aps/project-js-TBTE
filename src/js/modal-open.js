@@ -1,5 +1,6 @@
 import { getBookInfo } from './books-api';
 import { showError } from './block-home-books';
+import { modalClose } from './modal';
 import amazonLogo from '../images/amazon-logo.png';
 import appleBooksLogo from '../images/apple-books-logo.png';
 
