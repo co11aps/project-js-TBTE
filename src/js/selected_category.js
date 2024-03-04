@@ -1,15 +1,15 @@
 import { mainContainer } from "./block-home-books";
-import { categoriesList } from "./category_home";
 import { loaderOn } from "./preloader";
 import { loaderOff } from "./preloader";
-import { getCategories } from "./books-api";
 import { getBooksByCategory } from "./books-api";
 import { getPopularBooks } from "./books-api";
 import { renderHomeBooksMarkup } from "./block-home-books";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { templateBookCategoryEl } from "./block-home-books";
 import { showError } from './block-home-books.js';
+import { scrollToStart } from "./scroll-up.js";
+
+
 
 export async function currentCategoryTogle(value) {
     await document.querySelector('.js-current-category').classList.remove(`js-current-category`);
@@ -50,7 +50,7 @@ export async function onCategoryClick(el) {
 };
 
   
-  export async function makeCategoryPage(category, data) {
+export async function makeCategoryPage(category, data) {
   
     const title = category.split(" ");
     return ` 
@@ -63,15 +63,17 @@ export async function onCategoryClick(el) {
           <ul class="block_books-list">${await makeListOfBooks(data)}</ul>
           <button class="button all-categories_btn" data-js="All Categories" aria-label="All categories">All Categories</button>`;
   
-  };
+};
   
-  export async function makeListOfBooks(data) {
+
+export async function makeListOfBooks(data) {
     return data.map(categoryBookCard).join('');
   };
   
-  export function categoryBookCard({ author, book_image, title, description, _id}) {
+
+export function categoryBookCard({ author, book_image, title, description, _id}) {
  
-    return `<li class="books_itm" id=${_id} >  
+    return `<li class="book-item" id=${_id} >  
     <div class="books_wrapper"> 
     <img class="books_image" src="${book_image}"  alt="${description}" loading="lazy"  /> 
     <div class="books_overlay"> 
@@ -86,17 +88,11 @@ export async function onCategoryClick(el) {
   };
   
 
- 
-
 export async function onSeeMoreClick(event) {
   event.preventDefault();
-  // const currentEl = event.target.closest('.book-item');
-  // if (currentEl) {
-  //   const bookId = currentEl.attributes.id.value;
-  //   // modalAboutBook(bookId);
-  // }
 
   if (event.target.classList.contains('see-more-btn')) {
+    scrollToStart();
     const requestedCategory = event.target.dataset.js;
     mainContainer.innerHTML = '';
     loaderOn();
@@ -112,6 +108,7 @@ export async function onSeeMoreClick(event) {
       showError(err);
     }
   } else if (event.target.classList.contains('all-categories_btn')) {
+    scrollToStart();
     mainContainer.innerHTML = ""; 
     try {
       const response = (await getPopularBooks());

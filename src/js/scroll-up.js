@@ -14,3 +14,11 @@ const toTopButton = document.getElementById("to-top-button");
             behavior: "smooth",
         });
     });
+
+export function scrollToStart() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+}
+      
