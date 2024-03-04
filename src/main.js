@@ -12,6 +12,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import './js/supporters.js';
 import './js/scroll-up.js';
+import './js/block-home-books.js'
 import { getCategories } from './js/books-api.js';
 import { getPopularBooks } from './js/books-api.js';
 import { getBooksByCategory } from './js/books-api.js';
@@ -23,7 +24,6 @@ import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/buttom-switch.js';
 import './js/dark-theme.js';
-import { renderHomeBooksMarkup } from './js/block-home-books.js';
 import { showError } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
 import './js/selected_category.js';
@@ -34,17 +34,6 @@ import { onSeeMoreClick } from './js/selected_category.js';
 import { mainContainer } from './js/block-home-books.js';
 
 import './js/modal-open.js';
-
-async function renderMainPageBookList() {
-  loaderOn();
-  try {
-    const data = await getPopularBooks();
-    renderHomeBooksMarkup(data);
-  } catch (err) {
-    showError(err);
-  }
-  loaderOff();
-}
 
 async function renderMainCategoriesList() {
   loaderOn();
@@ -61,5 +50,3 @@ categoriesList.addEventListener('click', onCategoryClick);
 mainContainer.addEventListener('click', onSeeMoreClick);
 
 renderMainCategoriesList();
-
-renderMainPageBookList();
