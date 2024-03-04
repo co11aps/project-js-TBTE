@@ -12,7 +12,7 @@ export const modalClose = () => {
   refsModal.closeModalBtn.addEventListener('click', closeModal);
   refsModal.modal.addEventListener('click', removeModal);
   document.addEventListener('keydown', onEscapeKey);
-
+  console.log(123);
   function removeModal(e) {
     if (e.target === e.currentTarget) {
       closeModal();
