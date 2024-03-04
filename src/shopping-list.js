@@ -7,6 +7,7 @@ import './js/buttom-switch.js';
 import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/storage.js';
+import './js/dark-theme.js';
 import bookStackImageMobile from './images/books-stack-mobile.png';
 import bookStackImage from './images/books-stack.png';
 

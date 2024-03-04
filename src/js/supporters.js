@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -61,14 +61,20 @@ const fundsList = [
   },
 ];
 
-// onclick="event.preventDefault()
 const fundsListContainer = document.querySelector('.swiper-wrapper');
+const scrollBtn = document.querySelector('.button-next');
 
 const markup = fundsList
   .map(
-    ({ url, img }) => `<div class="swiper-slide">
-  <a class="fund-link" href="${url}" target="blank" rel="noopener noreferrer nofollow">
-     <img class="fund-logo" src="${img}" />
+    (el, index) => `<div class="swiper-slide"><span class="fund-number">
+      ${(index + 1).toString().padStart(2, '0')}
+        </span>
+  <a class="fund-link" href="${
+    el.url
+  }" target="blank" rel="noopener noreferrer nofollow">
+     <img class="fund-logo" src="${el.img}" srcset="${el.img} 1x, ${
+      el.img2x
+    } 2x"/>
   </a>
 </div>`
   )
@@ -90,3 +96,7 @@ const swiperOptions = {
 };
 
 const swiper = new Swiper('.mySwiper', swiperOptions);
+
+scrollBtn.addEventListener('click', () => {
+  scrollBtn.classList.toggle('button-next-up');
+});
