@@ -33,6 +33,8 @@ import { onCategoryClick } from './js/selected_category.js';
 import { onSeeMoreClick } from './js/selected_category.js';
 import { mainContainer } from './js/block-home-books.js';
 
+import './js/modal-open.js';
+
 async function renderMainPageBookList() {
   loaderOn();
   try {
