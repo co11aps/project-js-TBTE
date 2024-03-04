@@ -18,10 +18,10 @@ emptyMessageContainer.innerHTML = `
   <p>This page is empty, add some books and proceed to order.</p>
 <img 
   class="book-stack-image"
-  srcset="./images/books-stack-mobile.png 767w, 
-          ./images/books-stack.png 768w" 
+  srcset="/images/books-stack-mobile.png 767w, 
+          /images/books-stack.png 768w" 
   sizes="(max-width: 767px) 265px, 100vw" 
-  src="./images/books-stack-mobile.png" 
+  src="/images/books-stack-mobile.png" 
   alt="Empty Book Stack"  
 />
 `;
@@ -88,7 +88,7 @@ function createBookCard(book) {
             </ul>
             <button class="remove-book-btn" data-book-id="${book._id}">
               <svg width="38" height="38" class="remove-icon">
-                <use href="./images/icons.svg#icon-dump"></use>
+                <use href="/images/icons.svg#icon-dump"></use>
               </svg>
             </button>
           </div>
@@ -104,7 +104,6 @@ async function removeBookFromLocalStorage(bookId) {
     const storedBooks = await getStoredBooks();
     const updatedBooks = storedBooks.filter(book => book._id != bookId);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedBooks));
-    console.log('Stored books after removal:', updatedBooks);
     renderBooks(updatedBooks);
   } catch (error) {
     console.error('Error removing book from localStorage:', error);
