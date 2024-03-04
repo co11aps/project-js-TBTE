@@ -18,6 +18,8 @@
 @import url('./preloader.css');
 @import url('./scroll-up.css');
 @import url('./selected_category.css');
+@import url('./dark-theme.css');
+
 
 
 
@@ -36,4 +38,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+
+
+
+  --border-color-dark: #fff;
+  --border-color-light: #000;
 }

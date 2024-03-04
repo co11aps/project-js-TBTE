@@ -18,7 +18,7 @@
 }
 
 .header-container {
-  border: 1.5px solid #111;
+  border: 1.5px solid var(--border-color-light);
   border-radius: 0 0 8px 8px;
   width: 375px;
   height: 64px;
@@ -34,11 +34,9 @@
 }
 
 
-.lightsvg {
-  display: none;
-}
-.darksvg {
-  display: none;
+/* Стилі для темної теми */
+.dark .header-container {
+  border: 1.5px solid var(--border-color-dark);
 }
 
 
