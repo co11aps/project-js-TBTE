@@ -1,16 +1,11 @@
 
-
 .active-link {
 border-radius: 36px;
 padding: 8px 16px;
-
+font-weight: 700;
 background: #eac645;
 }
 
-.dark-body {
-    background-color: #111;
-    border: 1.50px solid #fff;
-}
 
 .header {
 max-width: 375px;
@@ -34,13 +29,6 @@ padding: 18px 20px;
     z-index: 100;
 }
 
-.lightsvg {
-    display: none;
-}
-.darksvg {
-    display: none;
-}
-
 .logo {
     margin-right: 144px;
     padding: 0;
@@ -50,9 +38,99 @@ padding: 18px 20px;
     display: none;
 }
 
+
+/* ========= checkbox =============== */
 .checkbox {
     cursor: pointer;
 }
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;    
+  height: 0;   
+  
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+/*   background-color: first */
+  
+  
+background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  
+  
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;       /* The slider  */
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+   background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+/*   background-color: second */
+   background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px blue;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 44px;
+
+  width: 42px;
+  height: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* ========== checkbox-end =========== */
 
 .burger-menu-btn {
     
@@ -99,12 +177,14 @@ padding: 18px 20px;
 .nav-container {
     margin: 0 auto;
     padding: 246px 128px 125px 129px;
-
 }
 
 .nav-mobil {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 156px;
+    height: 70px;
 
     font-weight: 500;
     font-size: 14px;
@@ -117,15 +197,12 @@ padding: 18px 20px;
 }
 
 .nav-item-mobil {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 17px;
 }
 
-
 .shopping-list-link-mob {
     display: flex;
-    align-items: center;
+    align-items: center; 
     gap: 4px;
 }
 
@@ -199,15 +276,12 @@ display: none;
     display: none;
 }
 
-    .shopping-linc-icon {
+    .shopping-link-icon {
         fill: #111;
     }
 
     .active-link {
-        background-color: #eac645;
-        ;
-        padding: 4 px 8px;
-        border-radius: 36px;
+        
 
     }
 
