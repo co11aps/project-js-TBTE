@@ -2,6 +2,9 @@
 
 .light {
 
+  --main-color-maim: #f6f6f6;
+/* background-color: #f6f6f6; */
+
 --main-color-primary: #fff;
   /* background-color: #fff;   background-color: var(--main-color-primary);*/
 
@@ -29,6 +32,10 @@
 /* ================ DARK  ================= */
 
 .dark {
+
+  --main-color-maim: #202024;
+/* background-color: #202024; */
+
 --main-color-primary:  #111;
   /* background-color: #111;   background-color: var(--main-color-primary);*/
 
@@ -39,10 +46,10 @@
 
 --font-color-main-header: #fff;
 
---color-accent-icon-light: #fff;
-/* stroke: #fff;  stroke: var(--color-accent-icon-light);*/
+--color-accent-icon-dark: #fff;
+/* stroke: #fff;  stroke: var(--color-accent-icon-dark);*/
 
---color-accent-icon-dark: black;
-/* stroke: black;  stroke: var(--color-accent-icon-dark);*/
+--color-accent-icon-light: black;
+/* stroke: black;  stroke: var(--color-accent-icon-light);*/
 
 }
