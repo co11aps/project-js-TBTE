@@ -38,7 +38,6 @@ async function getStoredBooks() {
         resolve([]);
       }
     });
-    console.log('Stored books:', storedBooks);
     return storedBooks;
   } catch (error) {
     console.error('Error getting stored books:', error);
