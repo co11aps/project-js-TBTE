@@ -76,14 +76,17 @@ const markup = fundsList
 
 fundsListContainer.insertAdjacentHTML('afterbegin', markup);
 
-const swiper = new Swiper('.mySwiper', {
+const swiperOptions = {
   modules: [Navigation],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.button-next',
   },
+  rewind: true,
+  allowTouchMove: false,
   direction: 'vertical',
   slidesPerView: 6,
   slidesPerGroup: 6,
   spaceBetween: 10,
-});
+};
+
+const swiper = new Swiper('.mySwiper', swiperOptions);
