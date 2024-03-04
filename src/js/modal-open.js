@@ -44,7 +44,7 @@ function templateBookInfoModal({
                 <ul class="modal-shops">
                     <li class="modal-shop">
                         <a href="${buy_links[0].url}" target="_blank" class="modal-shop-link">
-                            <img class="book-shop" src="${amazonLogo}" alt="Shop Logo">
+                            <img class="amazon" src="${amazonLogo}" alt="Shop Logo">
                         </a>
 
                     <li class="modal-shop">
