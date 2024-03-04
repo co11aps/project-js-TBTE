@@ -2,6 +2,7 @@ import { getBookInfo } from './books-api';
 import { showError } from './block-home-books';
 import amazonLogo from '../images/amazon-logo.png';
 import appleBooksLogo from '../images/apple-books-logo.png';
+import { modalClose } from './modal';
 
 const booksContainer = document.querySelector('.main-content');
 const modalWindow = document.querySelector('.backdrop-pop-up');
@@ -15,7 +16,7 @@ async function onBooksContainerClick(e) {
   modalWindowContent.innerHTML = '';
   if (modalBookEl) {
     modalWindow.classList.remove('is-hidden');
-    body.classList.add('no-scroll');
+    modalClose();
     try {
       let modalBookId = modalBookEl.id;
       let bookInfo = await getBookInfo(modalBookId);
