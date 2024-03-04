@@ -7,6 +7,7 @@ import './js/buttom-switch.js';
 import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/storage.js';
+import bookStackImage from './images/books-stack-mobile.png';
 
 const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
@@ -16,14 +17,14 @@ const emptyMessageContainer = document.createElement('div');
 emptyMessageContainer.classList.add('empty-message');
 emptyMessageContainer.innerHTML = `
   <p>This page is empty, add some books and proceed to order.</p>
-<img 
-  class="book-stack-image"
-  srcset="/images/books-stack-mobile.png 767w, 
-          /images/books-stack.png 768w" 
-  sizes="(max-width: 767px) 265px, 100vw" 
-  src="/images/books-stack-mobile.png" 
-  alt="Empty Book Stack"  
-/>
+  <img 
+    class="book-stack-image"
+    srcset="${bookStackImage} 767w, 
+            ${bookStackImage} 768w" 
+    sizes="(max-width: 767px) 265px, 100vw" 
+    src="${bookStackImage}" 
+    alt="Empty Book Stack"  
+  />
 `;
 // отримання збережених книг з localStorage
 async function getStoredBooks() {
