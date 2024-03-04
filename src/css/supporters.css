@@ -34,11 +34,13 @@ button.swiper-button-prev {
 }
  */
 
-.next-btn {
+
+
+.button-next {
     cursor: pointer;
     width: 32px;
     min-height: 32px;
-    background-color: #fff;
+    background-color: #FFFFFF;
     border: none;
     border-radius: 50px;
     justify-content: center;
@@ -48,6 +50,18 @@ button.swiper-button-prev {
     transition: transform .5s ease-in-out;
     display: flex;
     transform: rotateX(0);
+}
+
+.button-next-up {
+    transform: rotateX(180deg);
+}
+
+.button-next.hidden {
+    display: none;
+}
+
+.button-next-icon {
+    fill: #4F2EE8;
 }
 
 .swiper-slide {
@@ -62,27 +76,11 @@ button.swiper-button-prev {
 }
 
 
-/* .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-/* body {
-    position: relative;
-} */
-
 .funds-container {
     padding: 24px 40px;
-    /* position: relative; */
 }
 
 .funds-list {}
-
-/* .swiper-wrapper {
-    position: relative;
-} */
 
 .funds-title {
     display: flex;
@@ -112,11 +110,14 @@ button.swiper-button-prev {
         font-size: 24px;
         margin-bottom: 40px;
     }
-}
 
-/* .swiper {
-    --swiper-navigation-size: 44px;
-    --swiper-navigation-top-offset: 0;
-    --swiper-navigation-sides-offset: 10px;
-    --swiper-navigation-color: var(--swiper-theme-color);
-} */
+    .button-next {
+        width: 38px;
+        min-height: 38px;
+    }
+
+    .button-next-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
