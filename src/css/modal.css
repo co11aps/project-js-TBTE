@@ -11,16 +11,16 @@
 .backdrop-pop-up {
   position: fixed;
 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(17, 17, 17, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.4);
 
-  opacity: 1;
-  cursor: pointer;
-  z-index: 100;
-  padding: 94px 15px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 100;
+    padding: 94px 15px;
 }
 
 .modal-pop-up {
@@ -251,5 +251,6 @@
         font-size: 12px;
         line-height: 1.17;
     }
+
 
 }

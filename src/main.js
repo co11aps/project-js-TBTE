@@ -30,13 +30,15 @@ import './js/selected_category.js';
 import { categoriesList } from './js/category_home.js';
 import { onCategoryClick } from './js/selected_category.js';
 
+import { onSeeMoreClick } from './js/selected_category.js';
+import { mainContainer } from './js/block-home-books.js';
+
 async function renderMainPageBookList() {
   loaderOn();
-  try{
+  try {
     const data = await getPopularBooks();
     renderHomeBooksMarkup(data);
-  }
-  catch(err){
+  } catch (err) {
     showError(err);
   }
   loaderOff();
@@ -44,11 +46,10 @@ async function renderMainPageBookList() {
 
 async function renderMainCategoriesList() {
   loaderOn();
-  try{
+  try {
     const data = await getCategories();
     createCategoriesList(data);
-  }
-  catch(err){
+  } catch (err) {
     showError(err);
   }
   loaderOff();
