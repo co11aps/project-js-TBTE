@@ -30,7 +30,7 @@ document.getElementById('slider').addEventListener('change', toggleTheme);
                 setTheme('dark');
               document.getElementById("slider").checked = true;
               // iconUse.setAttribute('href', './images/icons.svg#icon-logo-dark');
-              console.dir(iconUse.getAttribute('href'));
+              // console.dir(iconUse.getAttribute('href'));
             } else {
                 setTheme('light');
               document.getElementById("slider").checked = false;
