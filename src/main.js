@@ -58,6 +58,7 @@ async function renderMainCategoriesList() {
 }
 
 categoriesList.addEventListener('click', onCategoryClick);
+mainContainer.addEventListener('click', onSeeMoreClick);
 
 renderMainCategoriesList();
 
