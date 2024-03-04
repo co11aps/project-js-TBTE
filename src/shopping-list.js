@@ -7,7 +7,8 @@ import './js/buttom-switch.js';
 import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/storage.js';
-import bookStackImage from './images/books-stack-mobile.png';
+import bookStackImageMobile from './images/books-stack-mobile.png';
+import bookStackImage from './images/books-stack.png';
 
 const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
@@ -19,7 +20,7 @@ emptyMessageContainer.innerHTML = `
   <p>This page is empty, add some books and proceed to order.</p>
   <img 
     class="book-stack-image"
-    srcset="${bookStackImage} 767w, 
+    srcset="${bookStackImageMobile} 767w, 
             ${bookStackImage} 768w" 
     sizes="(max-width: 767px) 265px, 100vw" 
     src="${bookStackImage}" 
