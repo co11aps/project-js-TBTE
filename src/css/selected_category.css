@@ -10,6 +10,7 @@
 .dark .block_books-title {
     color: white;
 }
+
 .dark .books_info-title {
     color: white;
 }
@@ -72,13 +73,13 @@
     object-fit: cover;
 }
 
-.book-item {
+/* .book-item {
     width: 180px;
     height: 256px;
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 40px;
-}
+} */
 
 
 .book-item:hover {
