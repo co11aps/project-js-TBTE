@@ -10,6 +10,7 @@ import './js/storage.js';
 import './js/dark-theme.js';
 import bookStackImageMobile from './images/books-stack-mobile.png';
 import bookStackImage from './images/books-stack.png';
+import './js/supporters.js';
 
 const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
