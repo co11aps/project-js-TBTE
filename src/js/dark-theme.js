@@ -1,6 +1,6 @@
 const iconUse = document.querySelector(".header-use-logo");
 
-
+console.log(iconUse);
 
  // function to set a given theme/color-scheme
         function setTheme(themeName) {
@@ -14,10 +14,8 @@ const iconUse = document.querySelector(".header-use-logo");
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
     setTheme('light');
-     iconUse.setAttribute('href', './images/icons.svg#icon-logo');
   } else {
     setTheme('dark');
-    iconUse.setAttribute('href', './images/icons.svg#icon-logo-dark');
   }
 }
 
@@ -31,11 +29,12 @@ document.getElementById('slider').addEventListener('change', toggleTheme);
             if (localStorage.getItem('theme') === 'dark') {
                 setTheme('dark');
               document.getElementById("slider").checked = true;
-              
+              // iconUse.setAttribute('href', './images/icons.svg#icon-logo-dark');
+              console.dir(iconUse.getAttribute('href'));
             } else {
                 setTheme('light');
               document.getElementById("slider").checked = false;
-              
+              // iconUse.setAttribute('href', './images/icons.svg#icon-logo');
             }
 }
 
