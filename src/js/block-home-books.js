@@ -16,7 +16,7 @@ function templateBookCard({
   bookCategory = list_name;
   return `<li class="book-item" id="${_id}">
                 <div class="book-wrapper">
-                <img class="book-img" src="${book_image}" alt="${title} ${contributor}">
+                <img loading="lazy" class="book-img" src="${book_image}" alt="${title} ${contributor}">
                 <div class="book-overlay">
                 <p class="book-overlay-text">QUICK VIEW</p>
                 </div>
@@ -59,10 +59,10 @@ export function renderHomeBooksMarkup(dataPopularBooks) {
 
 export function showError(msg) {
   iziToast.error({
-      title: 'Error',
-      message: msg,
-      });
-  };
+    title: 'Error',
+    message: msg,
+  });
+}
 async function renderMainPageBookList() {
   loaderOn();
   try {

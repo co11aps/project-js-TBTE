@@ -36,7 +36,7 @@ function templateBookInfoModal({
   author,
   buy_links,
 }) {
-  return `<img class="modal-img" src="${book_image}" alt="${title} ${contributor}" id="${_id}">
+  return `<img loading="lazy" class="modal-img" src="${book_image}" alt="${title} ${contributor}" id="${_id}">
             <div class="modal-img-description">
                 <h2 class="modal-book-title">${title}</h2>
                 <h3 class="modal-book-author">${author}</h3>
