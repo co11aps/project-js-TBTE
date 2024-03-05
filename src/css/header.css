@@ -1,12 +1,4 @@
 
-.active-link {
-  border-radius: 36px;
-  padding: 8px 16px;
-  font-weight: 700;
-  color: #111;
-  background: #eac645;
-  fill: #111;
-}
 
 
 .header {
@@ -45,7 +37,6 @@
 .nav {
   display: none;
 }
-
 
 /* ========= checkbox =============== */
 .checkbox {
@@ -212,7 +203,7 @@ position: fixed;
   min-width: 375px;
   display: none;
   flex-direction: column;
-
+z-index: 50;
   
 }
 
@@ -240,6 +231,11 @@ position: fixed;
   margin-bottom: 17px;
 }
 
+ .home-link-mob {
+  color: #fff;
+ }
+
+
 .shopping-list-link-mob {
   display: flex;
   align-items: center;
@@ -249,9 +245,23 @@ position: fixed;
   color: #fff;
 }
 
+.active-link {
+  border-radius: 36px;
+  padding: 8px 16px;
+  font-weight: 700;
+  fill: #111;
+  color: #111;
+  background: #eac645;
+}
+
 .shopping-link-icon-mob {
   fill: #fff;
 }
+
+.dark .shopping-link-icon-mob {
+  fill: #fff;
+}
+
 
 .burger-menu-photo {
   margin: 0 auto;
@@ -264,6 +274,8 @@ position: fixed;
 .is-close {
   display: none;
 }
+
+
 
 /* ===================== */
 
@@ -310,10 +322,12 @@ position: fixed;
     gap: 4px;
   }
       .shopping-link-icon {
-        stroke: var(--color-accent-icon-dark);
+        fill: #111;
     }
 
-    
+.dark .shopping-link-icon {
+        fill: #fff;
+    }   
 .active-link {
   font-weight: 700;
   color: #111;
