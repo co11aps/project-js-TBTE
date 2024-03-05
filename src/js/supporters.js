@@ -72,7 +72,7 @@ const markup = fundsList
   <a class="fund-link" href="${
     el.url
   }" target="blank" rel="noopener noreferrer nofollow">
-     <img loading="lazy" class="fund-logo" src="${el.img}" alt="${el.title}"/>
+     <img class="fund-logo" src="${el.img}" alt="${el.title}" height="32"/>
   </a>
 </div>`
   )

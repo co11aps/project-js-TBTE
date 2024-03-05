@@ -16,7 +16,7 @@ function templateBookCard({
   bookCategory = list_name;
   return `<li class="book-item" id="${_id}">
                 <div class="book-wrapper">
-                <img loading="lazy" class="book-img" src="${book_image}" alt="${title} ${contributor}">
+                <img class="book-img" src="${book_image}" alt="${title} ${contributor}" width="335" height="485">
                 <div class="book-overlay">
                 <p class="book-overlay-text">QUICK VIEW</p>
                 </div>

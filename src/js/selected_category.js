@@ -78,7 +78,7 @@ export function categoryBookCard({
 }) {
   return `<li class="book-item" id=${_id} >  
     <div class="books_wrapper"> 
-    <img loading="lazy" class="books_image" src="${book_image}"  alt="${description}" loading="lazy"  /> 
+    <img class="books_image" src="${book_image}"  alt="${description}" loading="lazy" width="335" height="485" /> 
     <div class="books_overlay"> 
     <p class="books_overlay-text">QUICK VIEW</p> 
     </div> 
