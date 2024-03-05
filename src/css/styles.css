@@ -41,11 +41,10 @@
   -webkit-text-size-adjust: 100%;
 
 
-
-
   --border-color-light: #000;
   --border-color-dark: #fff;
 
+  scrollbar-gutter: stable;
 }
 
 ::-webkit-scrollbar {
