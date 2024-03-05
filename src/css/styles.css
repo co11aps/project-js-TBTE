@@ -44,15 +44,19 @@
   --border-color-light: #000;
   --border-color-dark: #fff;
 
+}
+
+html {
   scrollbar-gutter: stable;
 }
+
 
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: none;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
