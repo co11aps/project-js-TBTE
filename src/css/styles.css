@@ -31,7 +31,8 @@
   font-weight: 400;
 
   color: #111;
-  background-color: #f6f6f6;
+  background-color: var(--main-color-maim);
+  ;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
