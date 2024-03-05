@@ -14,7 +14,7 @@ const iconUse = document.querySelector(".header-use-logo");
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
     setTheme('light');
-     iconUse.setAttribute('href', './images/icons.svg#icon-logo');
+    iconUse.setAttribute('href', './images/icons.svg#icon-logo');
   } else {
     setTheme('dark');
     iconUse.setAttribute('href', './images/icons.svg#icon-logo-dark');
