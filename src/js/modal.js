@@ -1,9 +1,13 @@
+import { getBookInfo } from './books-api'; //імпорт функціі яка бере данні з сервера (api)
+import { handleBookInStorage } from './storage'; /* ==імпорт функці== */
 export const modalClose = () => {
   const refsModal = {
     openModalBtn: document.querySelectorAll('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
-  };
+    modalShopigListBtn: document.querySelector('.modal-pop-up-btn'),
+  }; //знаходження дома//
+  refsModal.modalShopigListBtn.addEventListener('click', onUpdateStorage); //вішаєм на кнопку слухача для додавання і видалення з локал сторедж//
 
   refsModal.openModalBtn.forEach(element => {
     element.addEventListener('click', toggleModal);
@@ -58,3 +62,11 @@ export const modalClose = () => {
     document.removeEventListener('keydown', onEscapeKey);
   }
 };
+
+//змінюємо інформацію котра знаходиться в сторедж
+async function onUpdateStorage(event) {
+  const id = event.target.previousElementSibling.firstElementChild.id;
+  console.log(id);
+  const data = await getBookInfo(id);
+  handleBookInStorage(data);
+}

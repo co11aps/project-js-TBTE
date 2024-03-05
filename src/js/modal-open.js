@@ -3,6 +3,7 @@ import { showError } from './block-home-books';
 import { modalClose } from './modal';
 import amazonLogo from '../images/amazon-logo.png';
 import appleBooksLogo from '../images/apple-books-logo.png';
+import { checkInLocalStorage, upDateModalMarkup } from './storage';
 
 const booksContainer = document.querySelector('.main-content');
 const modalWindow = document.querySelector('.backdrop-pop-up');
@@ -55,6 +56,7 @@ function templateBookInfoModal({
             </div>`;
 }
 function renderBookInfoModal(data) {
+  upDateModalMarkup(!checkInLocalStorage(data._id));
   const markup = templateBookInfoModal(data);
   modalWindowContent.insertAdjacentHTML('afterbegin', markup);
 }
