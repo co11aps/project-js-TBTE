@@ -8,6 +8,9 @@
     line-height: 38px;
     margin-bottom: 40px;
 }
+.dark .books-home-title {
+    color: #fff;
+}
 .books-home-title-span{
     color: #4f2ee8;
 }
@@ -32,6 +35,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+.dark .book-info-title {
+    color: #fff;
 }
 .book-info-author{
     font-style: italic;
@@ -115,8 +121,13 @@
     display: flex;
 }
 
-  
+.dark .block_books-title {
+    color: #fff;
+}  
 
+.dark .books_info-title {
+    color: #fff;
+}
 
 
 

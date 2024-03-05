@@ -154,6 +154,17 @@ input:checked + .slider:before {
 
 .header-svg-burger {
   stroke: var(--color-accent-icon-dark);
+  transition: stroke 100ms;
+}
+
+.header-svg-burger:hover,
+.header-svg-burger:focus {
+  stroke: #4f2ee8;
+}
+
+.dark .header-svg-burger:hover,
+.dark .header-svg-burger:focus {
+  stroke: orange;
 }
 
 .x-cross-menu-btn {
@@ -167,12 +178,30 @@ input:checked + .slider:before {
 
 .x-cross-btn-svg {
   stroke: var(--color-accent-icon-dark);
+  transition: stroke 100ms;
 }
+
+
+.x-cross-btn-svg:hover,
+.x-cross-btn-svg:focus {
+  stroke: #4f2ee8;
+}
+
+.dark .x-cross-btn-svg:hover,
+.dark .x-cross-btn-svg:focus {
+  stroke: orange;
+}
+
 
 /* ======================== */
 
 .backdrop-menu {
-   outline: 2px solid rgb(0, 60, 255);
+position: fixed;
+    top: 0;
+    /* width: 100%; */
+  height: 100vh;
+  overflow: hidden;
+
   box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
@@ -184,14 +213,13 @@ input:checked + .slider:before {
   display: none;
   flex-direction: column;
 
-  height: 100vh;
-  overflow: hidden;
+  
 }
 
 .nav-container {
   margin: 0 auto;
     height: 100vh; 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .nav-mobil {

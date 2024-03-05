@@ -11,12 +11,17 @@
 --color-accent-icon-dark: black;
 /* stroke: black;  stroke: var(--color-accent-icon-dark);*/
 
---font-color-main-text: #fff;
-  /* color: #fff;   color: var(--font-color-main-text);*/
+--font-color-title:  #4f2ee8;
+/* color: #4f2ee8; */
+
+--font-color-main-text: rgba(17, 17, 17, 0.6);
+  /* color: rgba(17, 17, 17, 0.6);   color: var(--font-color-main-text);*/
 
 --font-color-main-header: #111;
   /* color: #111;   color: var(--font-color-main-header);*/
 
+--font-color-accent-categories: #4f2ee8; 
+/* color: #4f2ee8;   color: var(--font-color-accent-categories);*/
 
 --color-accent-icon-light: #fff;
 /* stroke: #fff;  stroke: var(--color-accent-icon-light);*/
@@ -45,6 +50,9 @@
 --font-color-main-text: rgba(255, 255, 255, 0.6);
 
 --font-color-main-header: #fff;
+
+--font-color-accent-categories: #eac645; 
+/* color: #eac645;   color: var(--font-color-accent-categories);*/
 
 --color-accent-icon-dark: #fff;
 /* stroke: #fff;  stroke: var(--color-accent-icon-dark);*/

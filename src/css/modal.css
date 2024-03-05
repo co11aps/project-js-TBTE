@@ -36,9 +36,12 @@
   max-width: 335px;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: white;
-  border: 2px solid #111;
+  background-color: var(--main-color-primary);
+  border: 1.5px solid var(--border-color-light);
   border-radius: 18px;
+}
+.dark .modal-pop-up {
+  border: 1.5px solid var(--border-color-dark);
 }
 
 .dark .modal-pop-up {
@@ -71,7 +74,8 @@
 }
 
 .dark .icon-x-close {
-  stroke: white;
+  stroke: #ffffff;
+  transition: stroke 100ms;
 }
 
 .icon-x-close:hover,
@@ -93,6 +97,7 @@
 }
 
 .modal-book-title {
+  color: var(--font-color-main-header);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.12;
@@ -119,7 +124,7 @@
 
 .modal-book-desc {
   margin-bottom: 14px;
-  color: #111;
+  color: var(--font-color-main-header);
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.04em;
@@ -152,6 +157,9 @@
 .amazon {
   filter: grayscale(100%);
 }
+.dark .amazon {
+  filter: brightness(0) invert(1);
+}
 
 .dark .amazon {
   filter: brightness(0) invert(1);
@@ -160,6 +168,10 @@
 .amazon:hover,
 .amazon:focus {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+.dark .amazon:hover,
+.dark .amazon:focus {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
 .dark .amazon:hover,
