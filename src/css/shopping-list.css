@@ -1,9 +1,12 @@
+:root {
+  --border-color-light: #fff;
+  --border-color-dark: #000;
+}
 .shopping-side-block {
   display: none;
 }
 
 .shopping-list-title {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.1875;
@@ -36,14 +39,16 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.card-list {
+.shopping-list {
   flex-direction: column;
   gap: 20px;
   margin-top: 40px;
   display: flex;
 }
-
+.book-card {
+  margin: 0 auto;
+  max-width: 100%;
+}
 .card-book {
   width: 100%;
   border: 2px solid #4f2ee866;
@@ -51,124 +56,121 @@
   padding: 25px;
   position: relative;
 }
-.book-card {
-  margin: 0 auto;
-  max-width: 100%;
-}
-.information-card {
-  display: flex;
-}
+
 .book-cover {
-  max-width: 98px;
-  height: 139px;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 8px;
   margin-right: 20px;
   overflow: hidden;
 }
 .book-title {
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  color: rgba(17, 17, 17, 1);
   font-size: 16px;
+  font-weight: 700;
   line-height: 18px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  margin-bottom: 8px;
 }
 .book-category {
-  letter-spacing: 0.03em;
-  color: rgba(180, 175, 175, 1);
-  margin-top: 4px;
   font-size: 12px;
-  font-weight: 400;
   line-height: 14px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #b4afaf;
 }
 .book-description {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.04em;
   text-align: left;
-  position: relative;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-right: 10px;
 }
-
 .book-author {
-  max-width: 98px;
-  letter-spacing: -0.04em;
-  margin-top: auto;
   font-size: 12px;
   font-style: italic;
-  font-weight: 400;
   line-height: 14px;
-  color: rgba(180, 175, 175, 1);
-}
-
-.market-link {
-  max-width: 136px;
-  max-height: 30px;
-  align-items: center;
-  gap: 14px;
-  margin-top: 24px;
-  display: flex;
-}
-.market-image {
-  filter: grayscale(100%);
-}
-.market-image:hover {
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-}
-.remove-book-btn {
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #b4afaf;
+  display: block;
   position: absolute;
-  top: 14px;
-  right: 14px;
-  background: none;
-  border: none;
-  outline: none;
+  bottom: 8px;
 }
-
-.remove-icon {
-  color: rgb(84, 49, 241);
-  transition: color 0.2s ease-in-out;
-}
-
-.remove-book-btn {
-  background: none;
-  border: none;
-  outline: none;
-  position: absolute;
-  top: 14px;
-  right: 14px;
+.storage-shops {
   cursor: pointer;
-}
-
-.remove-icon {
-  width: 38px;
-  height: 38px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.remove-book-btn:hover .remove-icon {
-  transform: scale(1.1);
-  color: rgba(79, 46, 232, 1);
-}
-
-.market-place-list {
+  border-radius: 50%;
   position: absolute;
-  display: flex;
-  gap: 8px;
-  margin-right: auto;
   bottom: 14px;
   right: 14px;
+  overflow: hidden;
+  display: flex;
   gap: 8px;
 }
-.data-or-books-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.modals-shops img {
+  filter: grayscale(100%);
+  mix-blend-mode: luminosity;
+  transition: transform 200ms, filter 200ms;
 }
 
-.book-stack-image {
-  max-width: 265px;
-  max-height: 198px;
+.storage-shop-img:hover,
+.storage-shop-img:focus {
+  mix-blend-mode: normal;
+  transform: scale(1.1);
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.storage-shop:hover,
+.storage-shop:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.list-shop img {
+  filter: grayscale(100%);
+  mix-blend-mode: luminosity;
+  transition: transform 200ms, filter 200ms;
+}
+.list-shop-img:hover,
+.list-shop-img:focus {
+  mix-blend-mode: normal;
+  transform: scale(1.1);
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.amazon:hover,
+.amazon:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.book-shop {
+  filter: grayscale(100%);
+}
+
+.book-shop:hover,
+.book-shop:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.modal-shop-link {
+}
+.list-book-shop {
+}
+.remove-book-btn {
+}
+.remove-book-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  overflow: hidden;
+  background: none;
+  border: none;
+  outline: none;
+  transition: transform 0.4s ease-in-out;
+}
+
+.remove-book-btn:active {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -189,6 +191,9 @@
   .book-stack-image {
     max-width: 322px;
     max-height: 241px;
+  }
+  .book-card {
+    min-width: 704px;
   }
 }
 
@@ -223,11 +228,10 @@
     border-radius: 16px;
     padding: 25px;
     position: relative;
-    margin: 0 auto; /* Це додаємо, щоб центрувати .card-book в батьківському контейнері */
+    margin: 0 auto;
   }
 
   .book-card {
-    max-width: 100%;
-    margin: 0 auto;
+    min-width: 996px;
   }
 }
