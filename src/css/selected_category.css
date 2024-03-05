@@ -181,7 +181,7 @@
     .books_image {
         display: block;
         width: 218px;
-        height: 316px;
+        height: 256px;
         object-fit: cover;
     }
 }
