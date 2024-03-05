@@ -72,6 +72,9 @@
   text-align: left;
   margin-bottom: 8px;
 }
+.dark .book-title {
+  color: white;
+}
 .book-category {
   font-size: 12px;
   line-height: 14px;
@@ -85,6 +88,9 @@
   letter-spacing: -0.04em;
   text-align: left;
 }
+.dark .book-description {
+  color: white;
+}
 .book-author {
   font-size: 12px;
   font-style: italic;
@@ -96,6 +102,9 @@
   position: absolute;
   bottom: 8px;
 }
+.dark .book-author {
+  color: white;
+}
 .storage-shops {
   cursor: pointer;
   border-radius: 50%;
@@ -106,6 +115,7 @@
   display: flex;
   gap: 8px;
 }
+
 .modals-shops img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
@@ -139,6 +149,17 @@
 .amazon:hover,
 .amazon:focus {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.dark .amazon:hover,
+.dark .amazon:focus {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
+.dark .amazon:hover,
+.dark .amazon:focus {
+  filter: brightness(0) invert(1)
+    drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
 .book-shop {
