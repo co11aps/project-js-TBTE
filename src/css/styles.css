@@ -42,7 +42,19 @@
 
 
 
-
   --border-color-dark: #fff;
   --border-color-light: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 15px;
 }
