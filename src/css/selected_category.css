@@ -7,12 +7,6 @@
     cursor: pointer;
 }
 
-.dark .block_books-title {
-    color: white;
-}
-.dark .books_info-title {
-    color: white;
-}
 
 .block_books-title {
     margin-bottom: 40px;
@@ -171,11 +165,6 @@
     padding: 14px 28px 14px 28px;
     border: 2px solid rgba(79, 46, 232, 1);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dark .all-categories_btn {
-    background-color: #111;
-    color: white;
 }
 
 .all-categories_btn:hover,

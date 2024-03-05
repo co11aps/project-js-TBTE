@@ -15,9 +15,6 @@
     color: rgba(17, 17, 17, 0.6);
     cursor: pointer;
 }
-.dark .category-item {
-    color: rgba(255, 255, 255, 0.6);
-}
 
 .js-current-category {
     font-family: "DM Sans", sans-serif;
@@ -28,9 +25,6 @@
     text-transform: uppercase;
     color: #4f2ee8;
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.dark .js-current-category {
-    color: #eac645;
 }
 
 @media screen and (min-width: 768px) {
