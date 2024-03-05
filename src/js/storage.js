@@ -12,29 +12,40 @@ export function addToStorage(book) {
   shoppingList.push(book);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(shoppingList));
 }
-export function handleBookInStorage(data) {
-  const isBookId = shoppingList.find(
-    bookInStorage => bookInStorage._id === data._id
-  );
-
+export function handleBookInStorage(book) {
+  const isBookId = checkInLocalStorage(book._id);
+  upDateModalMarkup(isBookId);
   if (isBookId) {
-    const dataBookID = document
-      .querySelector('.modal-pop-up-btn')
-      .getAttribute('data_id_of_book');
     const bookIndex = shoppingList.findIndex(
-      bookInStorage => bookInStorage._id === dataBookID
+      bookInStorage => bookInStorage._id === book._id
     );
 
     shoppingList.splice(bookIndex, 1);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(shoppingList));
-    document.querySelector('.modal-pop-up-btn').textContent =
-      'Add to shopping list';
-    modalMessage.remove();
+
     return;
   }
 
-  addToStorage(data);
-  document.querySelector('.modal-pop-up-btn').textContent =
-    'Remove from the shopping list';
-  document.querySelector('.modal-pop-up-btn').after(modalMessage);
+  addToStorage(book);
+}
+
+//перевіряєм чи є книга в Локал сторедж
+export function checkInLocalStorage(id) {
+  const isBookId = shoppingList.find(bookInStorage => bookInStorage._id === id);
+  return isBookId;
+}
+
+/* функція перемальовуєм кнопку в модалці. 
+Знаходимо кнопки і зміню\мо текс в залежності наявності в локал сторедж. 
+Знаходимо параграф з текстом під кнопкою видаляємо чи показуємо*/
+export function upDateModalMarkup(isActive) {
+  if (isActive) {
+    document.querySelector('.modal-pop-up-btn').textContent =
+      'Add to shopping list';
+    document.querySelector('.modal-pop-up-message').classList.add('hidden');
+  } else {
+    document.querySelector('.modal-pop-up-btn').textContent =
+      'Remove from the shopping list';
+    document.querySelector('.modal-pop-up-message').classList.remove('hidden');
+  }
 }
