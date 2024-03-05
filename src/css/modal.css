@@ -118,10 +118,6 @@
   color: #b4afaf;
 }
 
-.dark .modal-book-author {
-  color: white;
-}
-
 .modal-book-desc {
   margin-bottom: 14px;
   color: var(--font-color-main-header);

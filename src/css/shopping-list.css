@@ -15,6 +15,10 @@
   margin-bottom: 40px;
 }
 
+.dark .shopping-list-title {
+  color: #fff;
+}
+
 .shopping-list-title-part {
   color: #4f2ee8;
 }
@@ -26,11 +30,15 @@
 .empty-message p {
   width: 244px;
   letter-spacing: -0.02em;
-  color: #0009;
+  color: rgba(0, 0, 0, 0.6);
   margin: 120px auto auto;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+}
+
+.dark .empty-message p {
+  color: rgba(255, 255, 255, 0.6);  
 }
 
 .empty-message img {
