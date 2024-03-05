@@ -1,9 +1,7 @@
 .mySwiper {
     width: 100%;
     height: 292px;
-    /* position: relative; */
 }
-
 
 .button-next {
     cursor: pointer;
@@ -18,6 +16,7 @@
     padding: 0;
     transition: transform .5s ease-in-out;
     display: flex;
+    margin-top: 16px;
     transform: rotateX(0);
 }
 
@@ -25,16 +24,11 @@
     transform: rotateX(180deg);
 }
 
-.button-next.hidden {
-    display: none;
-}
-
 .button-next-icon {
     fill: #4F2EE8;
 }
 
 .swiper-slide {
-    /* text-align: center; */
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -43,12 +37,19 @@
     width: 159px;
 }
 
+.fund-number {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin-right: 16px;
+}
 
 .funds-container {
     padding: 24px 40px;
 }
-
-.funds-list {}
 
 .funds-title {
     display: flex;
@@ -64,13 +65,12 @@
 
 }
 
-
 .fund-logo {
     vertical-align: middle;
     height: 32px;
     display: inline-block;
     filter: brightness(0) invert(1);
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .ukraine-logo {

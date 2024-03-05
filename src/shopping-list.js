@@ -66,40 +66,52 @@ async function renderBooks() {
 }
 // Функція для створення карти книги
 function createBookCard(book) {
+  const { title, category, description, author, _id, buy_links, book_image } =
+    book;
   const card = document.createElement('div');
   card.classList.add('book-card');
+
   card.innerHTML = `
-    <ul class="card-list">
-      <li class="card-book">
-        <div class="information-card">
-          <div>
-            <img class="book-cover" src="${book.image}" alt="${book.title}" />
-          </div>
-          <div class="data-or-books-container" >
-            <h2 class="book-title">${book.title}</h2>
-            <h3 class="book-category">${book.bookCategory}</h3>
-            <p class="book-description">${book.title}</p>
-            <p class="book-author">${book.author}</p>
-            <ul class="market-place-list">
-              <li class="market-link" width="32" height="11">
-                <img class="market-image" src="/images/amazon-logo.png" alt="Marketplace-Image">
-              </li>
-              <li class="market-link" width="16" height="16">
-                <img class="market-image" src="/images/apple-books-logo.png" alt="Marketplace-Image">
-              </li>
-            </ul>
-            <button class="remove-book-btn" data-book-id="${book._id}">
-              <svg width="38" height="38" class="remove-icon">
-                <use href="/images/icons.svg#icon-dump"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <div class="card-book">
+      <img
+        class="book-cover"
+        src="${book_image}"
+        alt="${title}"
+        id="${_id}"
+      />
+      <div class="shopping-list-img-description">
+        <h2 class="book-title">${title}</h2>
+        <h3 class="book-category">${category}</h3>
+        <p class="book-description">${description}</p>
+        <p class="book-author">${author}</p>
+         <ul class="storage-shops">
+          ${
+            buy_links && Array.isArray(buy_links)
+              ? buy_links
+                  .map(
+                    (link, index) => `
+              <li class="list-shop">
+                <a href="${link.url}" target="_blank" class="modal-shop-link">
+                  <img class="list-book-shop" src="${
+                    index === 0 ? amazonLogo : appleBooksLogo
+                  }" alt="Shop Logo" /></a>
+              </li>`
+                  )
+                  .join('')
+              : ''
+          } </ul>
+        <button class="remove-book-btn" data-book-id="${_id}">
+          <svg width="38" height="38" class="remove-icon">
+            <use href="/images/icons.svg#icon-dump"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   `;
+
   return card;
 }
+
 // Функція для видалення елемента з localStorage за ID
 async function removeBookFromLocalStorage(bookId) {
   try {
