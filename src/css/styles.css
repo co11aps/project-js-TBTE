@@ -32,7 +32,6 @@
 
   color: #111;
   background-color: var(--main-color-maim);
-  ;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,6 +43,7 @@
   --border-color-light: #000;
   --border-color-dark: #fff;
 
+  transition: background-color .5s ease-in-out;
 }
 
 
@@ -63,6 +63,7 @@
 .dark ::-webkit-scrollbar-thumb {
   background-color: #111111;
   border-radius: 12px;
+  transition: background-color .5s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
