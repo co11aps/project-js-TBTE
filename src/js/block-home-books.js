@@ -14,9 +14,10 @@ function templateBookCard({
   list_name,
 }) {
   bookCategory = list_name;
-  return `<li class="book-item" id="${_id}">
+  return `<li class="book-li-item">
+                <button type="button" class="book-item" id="${_id}" aria-label="${title} ${contributor}">
                 <div class="book-wrapper">
-                <img class="book-img" src="${book_image}" alt="${title} ${contributor}" width="335" height="485">
+                <img class="book-img" src="${book_image}" alt="${title} ${contributor}">
                 <div class="book-overlay">
                 <p class="book-overlay-text">QUICK VIEW</p>
                 </div>
@@ -25,6 +26,7 @@ function templateBookCard({
                 <p class="book-info-title">${title}</p>
                 <p class="book-info-author">${author}</p>
                 </div>
+                </button>
             </li>`;
 }
 
@@ -36,7 +38,7 @@ export function templateBookCategoryEl({ books }) {
                     <ul class="books-category-list">` +
     bookCards +
     `</ul>
-                    <button class="button see-more-btn" data-js="${bookCategory}">SEE MORE</button>
+                    <button class="button see-more-btn" data-js="${bookCategory}" aria-label="See more">SEE MORE</button>
                 </li>`;
   return result;
 }
@@ -59,10 +61,10 @@ export function renderHomeBooksMarkup(dataPopularBooks) {
 
 export function showError(msg) {
   iziToast.error({
-    title: 'Error',
-    message: msg,
-  });
-}
+      title: 'Error',
+      message: msg,
+      });
+  };
 async function renderMainPageBookList() {
   loaderOn();
   try {

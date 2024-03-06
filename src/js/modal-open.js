@@ -1,5 +1,5 @@
 import { getBookInfo } from './books-api';
-import { showError } from './block-home-books';
+import { mainContainer, showError } from './block-home-books';
 import { modalClose } from './modal';
 import amazonLogo from '../images/amazon-logo.png';
 import appleBooksLogo from '../images/apple-books-logo.png';
@@ -13,6 +13,7 @@ let modalBookEl;
 booksContainer.addEventListener('click', onBooksContainerClick);
 
 async function onBooksContainerClick(e) {
+  body.classList.add("no-scroll");
   modalBookEl = e.target.closest('.book-item');
   modalWindowContent.innerHTML = '';
   if (modalBookEl) {
