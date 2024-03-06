@@ -39,19 +39,28 @@
 
       <div class="checkbox">
         <!-- light -->
-        <label id="switch" class="switch">
+        <label id="switch" class="switch" aria-label="Theme color switcher">
           <input type="checkbox" id="slider" />
           <span class="slider round"></span>
         </label>
       </div>
 
-      <button class="burger-menu-btn btn-active" type="button">
+      <button
+        class="burger-menu-btn btn-active"
+        type="button"
+        aria-label="Open page menu"
+      >
         <svg class="header-svg-burger" width="28" height="28">
           <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-burger-menu"></use>
         </svg>
       </button>
 
-      <button class="x-cross-menu-btn" type="button" data-is-open>
+      <button
+        class="x-cross-menu-btn"
+        type="button"
+        data-is-open
+        aria-label="close page menu"
+      >
         <svg class="x-cross-btn-svg" width="28" height="28">
           <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-x-close"></use>
         </svg>
@@ -110,7 +119,11 @@
     <div class="mySwiper swiper">
       <div class="swiper-wrapper"></div>
     </div>
-    <button type="button" class="button-next">
+    <button
+      type="button"
+      class="button-next"
+      aria-label="Scroll the funds list"
+    >
       <svg class="button-next-icon" width="20" height="20">
         <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-btn-arrow-up"></use>
       </svg>
@@ -124,7 +137,7 @@
         </div>
       </section>
     </div>
-    <button id="to-top-button" class="hidden">
+    <button id="to-top-button" class="hidden" aria-label="Scroll page to the top">
   <svg class="button-icon button-icon--arrow" width="24" height="25">
     <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-arrow-back-to-top"></use>
   </svg>
