@@ -17,7 +17,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  transition: background-color .5s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 /* Стилі для темної теми */
@@ -33,7 +33,7 @@
   background-image: url('../images/logo-light.svg');
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image .5s ease-in-out;
+  transition: background-image .25s ease-in-out;
 }
 
 .dark .logo {

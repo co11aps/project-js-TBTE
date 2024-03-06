@@ -135,7 +135,7 @@
 .storage-shops img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
-  transition: transform 200ms, filter 200ms;
+  transition: transform 250ms, filter 200ms;
 }
 
 .storage-shops-img:hover,
@@ -153,7 +153,7 @@
 .list-shop img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
-  transition: transform 200ms, filter 200ms;
+  transition: transform 250ms, filter 200ms;
 }
 .list-shop-img:hover,
 .list-shop-img:focus {
@@ -192,7 +192,7 @@
   background: none;
   border: none;
   outline: none;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .remove-book-btn:active {

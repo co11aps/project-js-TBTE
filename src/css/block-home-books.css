@@ -7,7 +7,7 @@
     font-weight: 700;
     line-height: 38px;
     margin-bottom: 40px;
-    transition: color, background-color, .5s ease-in-out;
+    transition: color, background-color, .25s ease-in-out;
 }
 
 .dark .books-home-title {
@@ -80,7 +80,7 @@
     width: 100%;
     background: #eac645;
     padding-top: 13%;
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
     position: absolute;
     top: 100%;
     left: 0;
@@ -110,7 +110,7 @@
     display: flex;
     justify-content: center;
     margin-top: 8px;
-    transition: color, background-color, .5s ease-in-out;
+    transition: color, background-color, .25s ease-in-out;
 }
 
 .see-more-btn:hover,
@@ -137,7 +137,7 @@
     border: none;
     border-radius: 8px;
     background-color: var(--main-color-maim);
-    transition: color, background-color, .5s ease-in-out;
+    transition: color, background-color, .25s ease-in-out;
 
 }
 
