@@ -43,7 +43,7 @@
   --border-color-light: #000;
   --border-color-dark: #fff;
 
-  transition: background-color .5s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 
