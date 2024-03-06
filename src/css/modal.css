@@ -81,7 +81,7 @@
 
 .icon-x-close:hover,
 .icon-x-close:focus {
-  stroke: orange;
+  stroke: #EAC645;
 }
 
 .modal-book-attributes {
@@ -117,6 +117,7 @@
   line-height: 1.17;
   letter-spacing: -0.04em;
   color: #b4afaf;
+  font-weight: normal;
 }
 
 .modal-book-desc {
@@ -226,8 +227,7 @@
   color: white;
 }
 
-.modal-pop-up-btn:hover,
-.modal-pop-up-btn:focus {
+.modal-pop-up-btn:hover {
   background-color: #4f2ee8;
   color: white;
 }
@@ -235,7 +235,7 @@
 .modal-pop-up-message {
   text-align: center;
   font-weight: 400;
-  margin: 8px auto;
+  margin: auto;
   width: 242px;
   font-size: 10px;
   line-height: 1.2;
@@ -244,7 +244,23 @@
 
 .dark .modal-pop-up-message {
   color: rgba(255, 255, 255, 0.5);
-  ;
+}
+
+.modal-link-to-list {
+  text-decoration: underline #4f2ee8;
+  transition: color .2s ease-in-out;
+}
+
+.modal-link-to-list:hover {
+  color: #4f2ee8;
+}
+
+.dark .modal-link-to-list {
+  text-decoration: underline #EAC645;
+}
+
+.dark .modal-link-to-list:hover {
+  color: #EAC645;
 }
 
 @media screen and (min-width: 768px) {
@@ -264,7 +280,6 @@
   .modal-pop-up-content {
     display: flex;
     gap: 24px;
-    margin-bottom: 40px;
     width: 616px;
     height: 298px;
   }
@@ -299,6 +314,10 @@
     min-width: 499px;
     font-size: 18px;
     line-height: 1.33;
+  }
+
+  .modal-pop-up-message-box {
+    height: 40px;
   }
 
   .modal-pop-up-message {
