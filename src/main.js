@@ -12,7 +12,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import './js/supporters.js';
 import './js/scroll-up.js';
-import './js/block-home-books.js'
+import './js/block-home-books.js';
 import { getCategories } from './js/books-api.js';
 import { getPopularBooks } from './js/books-api.js';
 import { getBooksByCategory } from './js/books-api.js';
@@ -22,7 +22,6 @@ import { loaderOff } from './js/preloader.js';
 
 import './js/active-page-menu.js';
 import './js/mobile-menu.js';
-import './js/buttom-switch.js';
 import './js/dark-theme.js';
 import { showError } from './js/block-home-books.js';
 import { createCategoriesList } from './js/category_home.js';
