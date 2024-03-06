@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 80px;
-    cursor: pointer;
 }
 .block_books-title {
     font-family: 'DM Sans';
@@ -15,7 +14,7 @@
     letter-spacing: -0.04em;
     text-align: left;
     color: #111111;
-    transition: color, background-color, .5s ease-in-out;
+    transition: color, background-color, .25s ease-in-out;
 }
 
 .dark .block_books-title {
@@ -46,7 +45,7 @@
         letter-spacing: -0.04em;
         text-align: left;
         color: rgba(79, 46, 232, 1);
-        transition: color, background-color, .5s ease-in-out;
+        transition: color, background-color, .25s ease-in-out;
 }
 
 .books_image {
@@ -81,7 +80,7 @@
     top: 100%;
     padding-top: 13%;
     background: rgba(234, 198, 69, 1);
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .books_overlay-text {
@@ -154,7 +153,7 @@
     padding: 14px 28px 14px 28px;
     border: 2px solid rgba(79, 46, 232, 1);
     background-color:  white;
-    transition: background-color, border, color, .5s ease-in-out;
+    transition: background-color, border, color, .25s ease-in-out;
 }
 
 .dark .all-categories_btn {
@@ -168,7 +167,7 @@
     background: rgba(79, 46, 232, 1);
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
     border: 2px solid rgba(79, 46, 232, 1);
-    color:  white;
+    color: white;
     border: none;
 }
 
@@ -178,7 +177,7 @@
         font-size: 48px;
         line-height: 1.08333;
         letter-spacing: 0.02em;
-        transition: color, background-color, .5s ease-in-out;
+        transition: color, background-color, .25s ease-in-out;
     }
 
 .block_books-colortitle {
@@ -190,7 +189,7 @@
         letter-spacing: -0.04em;
         text-align: left;
         color: rgba(79, 46, 232, 1);
-        transition: color, background-color, .5s ease-in-out;
+        transition: color, background-color, .25s ease-in-out;
 }
 
 .dark .block_books-title{

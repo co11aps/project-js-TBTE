@@ -63,7 +63,7 @@
 .dark ::-webkit-scrollbar-thumb {
   background-color: #111111;
   border-radius: 12px;
-  transition: background-color .5s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {

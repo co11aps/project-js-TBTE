@@ -142,7 +142,7 @@
 .modal-shop-img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
-  transition: transform 200ms, filter 200ms;
+  transition: transform 250ms, filter 200ms;
 }
 
 .modal-shop-img:hover,
@@ -216,7 +216,7 @@
   font-weight: 700;
   line-height: 24px;
   transition-property: color, background-color, scale;
-  transition-duration: 0.3s;
+  transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
   position: relative;
   overflow: hidden;
@@ -250,7 +250,7 @@
 .modal-link-to-list {
   font-weight: bold;
   text-decoration: underline #4f2ee8;
-  transition: color .2s ease-in-out;
+  transition: color .25s ease-in-out;
 }
 
 .modal-link-to-list:hover {
