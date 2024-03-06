@@ -1,8 +1,9 @@
 .categories-list {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 24px;
-    width: 307px;
+    width: 335px;
     height: 228px;
 }
 
@@ -19,6 +20,25 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
+.category-button {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.125;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(17, 17, 17, 0.6);
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color, .5s ease-in-out;
+}
+
+.dark .category-button {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .js-current-category {
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
@@ -27,7 +47,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #4f2ee8;
-    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color, .5s ease-in-out;
 }
 .dark .js-current-category {
     color: #eac645;
@@ -35,7 +55,7 @@
 
 @media screen and (min-width: 768px) {
 .categories-list {
-    width: 309px;
+    width: 337px;
     height: 472px;
 }
 
@@ -48,6 +68,21 @@
     color: rgba(17, 17, 17, 0.6);
 }
 
+.category-button {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(17, 17, 17, 0.6);
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color, .5s ease-in-out;
+}
+
 .js-current-category {
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
@@ -56,7 +91,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #4f2ee8;
-    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color, .5s ease-in-out;
 }
 }
 
@@ -74,7 +109,22 @@
     letter-spacing: -0.02em;
     color: rgba(17, 17, 17, 0.6);
     }
-    
+
+.category-button {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(17, 17, 17, 0.6);
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color, .5s ease-in-out;
+}  
+
 .js-current-category {
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
