@@ -1,6 +1,16 @@
-
-
 export default {
   homeLink: document.querySelector('a.home-link'),
   shoppingListLink: document.querySelector('a.shopping-list-link'),
+  homeLinkMob: document.querySelector('.home-link-mob'),
+  shoppingListLinkMob: document.querySelector('.shopping-list-link-mob'),
+  openBtn: document.querySelector('.burger-menu-btn'),
+  closeBtn: document.querySelector('.x-cross-menu-btn'),
+  menu: document.querySelector('.backdrop-menu'),
+  booksContainer: document.querySelector('.main-content'),
+  modalWindow: document.querySelector('.backdrop-pop-up'),
+  modalWindowContent: document.querySelector('.modal-pop-up-content'),
+  categoriesList: document.querySelector('.categories-list'),
+  mainContainer: document.querySelector('.main-content'),
+  iconUse: document.querySelector('.header-use-logo'),
+  toTopButton: document.getElementById('to-top-button'),
 };
