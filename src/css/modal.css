@@ -41,6 +41,10 @@
   border-radius: 18px;
 }
 
+.modal-pop-up-content {
+  min-height: 520px;
+}
+
 .dark .modal-pop-up {
   border: 1.5px solid var(--border-color-dark);
 }
