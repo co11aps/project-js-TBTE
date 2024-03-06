@@ -15,6 +15,7 @@
     letter-spacing: -0.04em;
     text-align: left;
     color: #111111;
+    transition: color, background-color, .5s ease-in-out;
 }
 
 .dark .block_books-title {
@@ -45,6 +46,7 @@
         letter-spacing: -0.04em;
         text-align: left;
         color: rgba(79, 46, 232, 1);
+        transition: color, background-color, .5s ease-in-out;
 }
 
 .books_image {
@@ -79,7 +81,7 @@
     top: 100%;
     padding-top: 13%;
     background: rgba(234, 198, 69, 1);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all .5s ease-in-out;
 }
 
 .books_overlay-text {
@@ -133,7 +135,6 @@
     color: rgba(79, 46, 232, 1);
     text-transform: uppercase;
     white-space: nowrap;
-
 }
 
 
@@ -152,12 +153,14 @@
     border-radius: 40px;
     padding: 14px 28px 14px 28px;
     border: 2px solid rgba(79, 46, 232, 1);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color:  white;
+    transition: background-color, border, color, .5s ease-in-out;
 }
 
 .dark .all-categories_btn {
-    background-color: #111;
-    color: white;
+    border: none;
+    background-color: rgba(234, 198, 69, 1);;
+    color: #111111;
 }
 
 .all-categories_btn:hover,
@@ -165,6 +168,8 @@
     background: rgba(79, 46, 232, 1);
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
     border: 2px solid rgba(79, 46, 232, 1);
+    color:  white;
+    border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -173,7 +178,9 @@
         font-size: 48px;
         line-height: 1.08333;
         letter-spacing: 0.02em;
+        transition: color, background-color, .5s ease-in-out;
     }
+
 .block_books-colortitle {
         font-family: 'DM Sans';
         font-style: normal;
@@ -183,6 +190,7 @@
         letter-spacing: -0.04em;
         text-align: left;
         color: rgba(79, 46, 232, 1);
+        transition: color, background-color, .5s ease-in-out;
 }
 
 .dark .block_books-title{
