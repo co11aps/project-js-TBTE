@@ -17,7 +17,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  transition: background-color .25s ease-in-out;
+  transition: color, background-color, .25s ease-in-out;
 }
 
 /* Стилі для темної теми */
@@ -297,6 +297,7 @@ input:checked+.slider:before {
 
   .home-link {
     color: var(--font-color-main-header);
+    transition: color .25s ease-in-out;
   }
 
   .shopping-list-link {
@@ -305,6 +306,7 @@ input:checked+.slider:before {
     align-items: center;
     gap: 4px;
     fill: var(--font-color-main-header);
+    transition: color, fill, .25s ease-in-out;
     ;
   }
 
