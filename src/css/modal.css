@@ -40,6 +40,7 @@
   border: 1.5px solid var(--border-color-light);
   border-radius: 18px;
 }
+
 .dark .modal-pop-up {
   border: 1.5px solid var(--border-color-dark);
 }
@@ -153,6 +154,7 @@
 .amazon {
   filter: grayscale(100%);
 }
+
 .dark .amazon {
   filter: brightness(0) invert(1);
 }
@@ -165,6 +167,7 @@
 .amazon:focus {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
+
 .dark .amazon:hover,
 .dark .amazon:focus {
   filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
@@ -240,7 +243,8 @@
 }
 
 .dark .modal-pop-up-message {
-  color: rgba(255, 255, 255, 0.5);;
+  color: rgba(255, 255, 255, 0.5);
+  ;
 }
 
 @media screen and (min-width: 768px) {
@@ -261,6 +265,8 @@
     display: flex;
     gap: 24px;
     margin-bottom: 40px;
+    width: 616px;
+    height: 298px;
   }
 
   .modal-img {
