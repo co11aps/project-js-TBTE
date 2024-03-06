@@ -9,9 +9,9 @@
     
     <script type="module" crossorigin src="/project-js-TBTE/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/vendor-25a77764.js">
-    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-4752b1e4.js">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-5f0bb382.js">
     <link rel="stylesheet" href="/project-js-TBTE/assets/vendor-5f57da0a.css">
-    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-05a591f6.css">
+    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-d35a8ac1.css">
   </head>
   <body>
     <div class="main-container">
@@ -140,13 +140,19 @@
 
     <div class="modal-pop-up-content"></div>
 
-    <button type="button" class="modal-pop-up-btn button">
+    <div class="modal-pop-up-message-box">
+      <p class="modal-pop-up-message hidden">
+        Сongratulations! You have added the book to the <a class="modal-link-to-list" href="../shopping-list.html">shopping list</a>. To delete,
+        press the button “Remove from the shopping list”.
+      </p>
+    </div>
+    
+    <button 
+      aria-label="add or remove book from the shopping list" 
+      type="button" 
+      class="modal-pop-up-btn button">
       Add to shopping list
     </button>
-    <p class="modal-pop-up-message hidden">
-      Сongratulations! You have added the book to the shopping list. To delete,
-      press the button “Remove from the shopping list”.
-    </p>
   </div>
 </div>
 

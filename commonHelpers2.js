@@ -1,4 +1,4 @@
-import{a as h,b}from"./assets/apple-books-logo-4752b1e4.js";import"./assets/vendor-25a77764.js";const u="/project-js-TBTE/assets/books-stack-mobile-487658af.png",l="/project-js-TBTE/assets/books-stack-a8e7c57b.png",d="storage-of-books",r=document.querySelector(".shopping-list"),c=document.createElement("div");c.classList.add("empty-message");c.innerHTML=`
+import{a as h,b}from"./assets/apple-books-logo-5f0bb382.js";import"./assets/vendor-25a77764.js";const u="/project-js-TBTE/assets/books-stack-mobile-487658af.png",l="/project-js-TBTE/assets/books-stack-a8e7c57b.png",d="storage-of-books",r=document.querySelector(".shopping-list"),c=document.createElement("div");c.classList.add("empty-message");c.innerHTML=`
   <p>This page is empty, add some books and proceed to order.</p>
   <img 
     class="book-stack-image"
@@ -30,7 +30,7 @@ import{a as h,b}from"./assets/apple-books-logo-4752b1e4.js";import"./assets/vend
     </ul>
     <button class="remove-book-btn" data-book-id="${i}">
       <svg width="38" height="38" class="remove-icon">
-        <use href="./images/icons.svg#icon-dump"></use>
+        <use href="/images/icons.svg#icon-dump"></use>
       </svg>
     </button>
   </div>
