@@ -14,14 +14,14 @@ export async function currentCategoryTogle(value) {
     .querySelector('.js-current-category')
     .classList.remove(`js-current-category`);
   document
-    .querySelector(`li[data-category="${value}"]`)
+    .querySelector(`button[data-category="${value}"]`)
     .classList.add(`js-current-category`);
 }
 
 export async function onCategoryClick(el) {
   el.preventDefault();
 
-  if (el.target.classList.contains('category-item')) {
+  if (el.target.classList.contains('category-button')) {
     mainContainer.innerHTML = '';
     currentCategoryTogle(el.target.dataset.category);
 
@@ -75,8 +75,10 @@ export function categoryBookCard({
   title,
   description,
   _id,
+  contributor,
 }) {
-  return `<li class="book-item" id=${_id} >  
+  return `<li class="book-li-item">
+    <button type="button" class="book-item" id="${_id}" aria-label="${title} ${contributor}">  
     <div class="books_wrapper"> 
     <img class="books_image" src="${book_image}"  alt="${description}" loading="lazy" width="335" height="485" /> 
     <div class="books_overlay"> 
@@ -86,7 +88,8 @@ export function categoryBookCard({
     <div class="books_info">  
     <p class="books_info-title">${title}</p>  
     <p class="books_info-author">${author}</p>  
-    </div>  
+    </div>
+    </button>
     </li>`;
 }
 

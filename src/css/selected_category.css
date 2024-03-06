@@ -6,6 +6,16 @@
     row-gap: 80px;
     cursor: pointer;
 }
+.block_books-title {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #111111;
+}
 
 .dark .block_books-title {
     color: white;
@@ -35,7 +45,6 @@
         letter-spacing: -0.04em;
         text-align: left;
         color: rgba(79, 46, 232, 1);
-
 }
 
 .books_image {
@@ -165,6 +174,33 @@
         line-height: 1.08333;
         letter-spacing: 0.02em;
     }
+.block_books-colortitle {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 38px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        color: rgba(79, 46, 232, 1);
+}
+
+.dark .block_books-title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.08333;
+        letter-spacing: 0.02em;
+    }
+.dark .block_books-colortitle {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 38px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        color: rgba(79, 46, 232, 1);
+}
 
 .books_image {
         display: block;
