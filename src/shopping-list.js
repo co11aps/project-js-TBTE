@@ -18,13 +18,6 @@ import iconsDelete from './images/icons.svg';
 const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
 
-const interactiveElements = document.querySelectorAll(
-  'button, [role="button"], [href], [tabindex]'
-);
-interactiveElements.forEach(element => {
-  element.setAttribute('aria-label', 'See more');
-});
-
 //повідомлення про відсутність книг
 const emptyMessageContainer = document.createElement('div');
 emptyMessageContainer.classList.add('empty-message');
@@ -93,17 +86,17 @@ function createBookCard(book) {
     <p class="book-author">${author}</p>
     <ul class="storage-shops">
       <li class="list-shop">
-        <a href="${buy_links[0].url}" target="_blank" class="storage-shop-link">
+        <a href="${buy_links[0].url}" target="_blank" aria-label="Buy on Amazon" class="storage-shop-link">
           <img class="amazon" width="32" height="11"  src="${amazonLogo}" alt="Shop Logo" />
         </a>
       </li>
       <li class="list-shop">
-        <a href="${buy_links[1].url}" target="_blank" class="storage-shop-link">
+        <a href="${buy_links[1].url}" target="_blank" aria-label="Buy in Apple books" class="storage-shop-link">
           <img class="book-shop" width="16" height="16" src="${appleBooksLogo}" alt="Shop Logo" />
         </a>
       </li>
     </ul>
-    <button type="button"class="remove-book-btn" data-book-id="${_id}">
+    <button aria-label="Delete book" type="button"class="remove-book-btn" data-book-id="${_id}">
       <svg width="38" height="38" class="remove-icon">
         <use xlink:href="${iconsDelete}#icon-dump"></use>
       </svg>

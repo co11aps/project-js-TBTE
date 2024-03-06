@@ -80,6 +80,7 @@
   letter-spacing: -0.04em;
   text-align: left;
   margin-bottom: 4px;
+  transition: color, fill, 0.25s ease-in-out;
 }
 .dark .book-title {
   color: #fff;
@@ -92,6 +93,7 @@
   text-align: left;
   color: #b4afaf;
   margin-bottom: 8px;
+  transition: color, fill, 0.25s ease-in-out;
 }
 .book-description {
   font-size: 14px;
@@ -106,6 +108,7 @@
   -webkit-box-orient: vertical;
   margin: 0;
   margin-right: 4px;
+  transition: color, fill, 0.25s ease-in-out;
 }
 .dark .book-description {
   color: #fff;
@@ -135,7 +138,7 @@
 .storage-shops img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
-  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  transition: transform 200ms, filter 200ms;
 }
 
 .storage-shops-img:hover,
@@ -153,7 +156,7 @@
 .list-shop img {
   filter: grayscale(100%);
   mix-blend-mode: luminosity;
-  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  transition: transform 200ms, filter 200ms;
 }
 .list-shop-img:hover,
 .list-shop-img:focus {
@@ -192,7 +195,7 @@
   background: none;
   border: none;
   outline: none;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .remove-book-btn:active {
