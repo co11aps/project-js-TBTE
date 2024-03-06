@@ -30,7 +30,7 @@ import{a as h,b}from"./assets/apple-books-logo-0c216e37.js";import"./assets/vend
     </ul>
     <button class="remove-book-btn" data-book-id="${i}">
       <svg width="38" height="38" class="remove-icon">
-        <use href="/images/icons.svg#icon-dump"></use>
+        <use href="./images/icons.svg#icon-dump"></use>
       </svg>
     </button>
   </div>
