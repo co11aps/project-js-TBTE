@@ -1,25 +1,22 @@
 import { getBookInfo } from './books-api';
-import { mainContainer, showError } from './block-home-books';
+import { showError } from './block-home-books';
 import { modalClose } from './modal';
 import amazonLogo from '../images/amazon-logo.png';
 import appleBooksLogo from '../images/apple-books-logo.png';
 import { checkInLocalStorage, upDateModalMarkup } from './storage';
+import refs from './refs';
 
-const booksContainer = document.querySelector('.main-content');
-const modalWindow = document.querySelector('.backdrop-pop-up');
-const modalWindowContent = document.querySelector('.modal-pop-up-content');
-const body = document.querySelector('body');
 let modalBookEl;
-booksContainer.addEventListener('click', onBooksContainerClick);
+refs.booksContainer.addEventListener('click', onBooksContainerClick);
 
 async function onBooksContainerClick(e) {
   modalBookEl = e.target.closest('.book-item');
-  modalWindowContent.innerHTML = '';
+  refs.modalWindowContent.innerHTML = '';
   if (modalBookEl) {
-    modalWindow.classList.remove('is-hidden');
+    refs.modalWindow.classList.remove('is-hidden');
     modalClose();
     try {
-      body.classList.add("no-scroll");
+      refs.body.classList.add("no-scroll");
       let modalBookId = modalBookEl.id;
       let bookInfo = await getBookInfo(modalBookId);
       renderBookInfoModal(bookInfo);
@@ -59,5 +56,5 @@ function templateBookInfoModal({
 function renderBookInfoModal(data) {
   upDateModalMarkup(!checkInLocalStorage(data._id));
   const markup = templateBookInfoModal(data);
-  modalWindowContent.insertAdjacentHTML('afterbegin', markup);
+  refs.modalWindowContent.insertAdjacentHTML('afterbegin', markup);
 }

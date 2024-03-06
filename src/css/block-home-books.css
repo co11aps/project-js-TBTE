@@ -41,6 +41,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    text-align: left;
 }
 
 .dark .book-info-title {
@@ -54,6 +55,7 @@
     line-height: 1.16667;
     letter-spacing: -0.04em;
     color: #b4afaf;
+    text-align: left;
 }
 
 .book-item-home {
@@ -138,7 +140,7 @@
     border-radius: 8px;
     background-color: var(--main-color-maim);
     transition: color, background-color, .25s ease-in-out;
-
+    overflow: hidden;
 }
 
 .books-category-list {

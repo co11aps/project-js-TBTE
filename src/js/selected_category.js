@@ -1,4 +1,3 @@
-import { mainContainer } from './block-home-books';
 import { loaderOn } from './preloader';
 import { loaderOff } from './preloader';
 import { getBooksByCategory } from './books-api';
@@ -8,6 +7,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { showError } from './block-home-books.js';
 import { scrollToStart } from './scroll-up.js';
+import refs from './refs';
 
 export async function currentCategoryTogle(value) {
   await document
@@ -22,7 +22,7 @@ export async function onCategoryClick(el) {
   el.preventDefault();
 
   if (el.target.classList.contains('category-button')) {
-    mainContainer.innerHTML = '';
+    refs.mainContainer.innerHTML = '';
     currentCategoryTogle(el.target.dataset.category);
 
     if (el.target.dataset.category === `all categories`) {
@@ -39,7 +39,7 @@ export async function onCategoryClick(el) {
     } else {
       try {
         const data = await getBooksByCategory(`${el.target.dataset.category}`);
-        mainContainer.innerHTML = await makeCategoryPage(
+        refs.mainContainer.innerHTML = await makeCategoryPage(
           `${el.target.dataset.category}`,
           data
         );
@@ -99,11 +99,11 @@ export async function onSeeMoreClick(event) {
   if (event.target.classList.contains('see-more-btn')) {
     scrollToStart();
     const requestedCategory = event.target.dataset.js;
-    mainContainer.innerHTML = '';
+    refs.mainContainer.innerHTML = '';
     loaderOn();
     try {
       const data = await getBooksByCategory(`${requestedCategory}`);
-      mainContainer.insertAdjacentHTML(
+      refs.mainContainer.insertAdjacentHTML(
         'beforeend',
         await makeCategoryPage(`${requestedCategory}`, data)
       );
@@ -114,7 +114,7 @@ export async function onSeeMoreClick(event) {
     }
   } else if (event.target.classList.contains('all-categories_btn')) {
     scrollToStart();
-    mainContainer.innerHTML = '';
+    refs.mainContainer.innerHTML = '';
     try {
       const response = await getPopularBooks();
       loaderOn();
