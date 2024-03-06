@@ -147,7 +147,7 @@ input:checked+.slider:before {
 
 .header-svg-burger {
   stroke: var(--color-accent-icon-dark);
-  transition: stroke 100ms;
+  transition: stroke .5s ease-in-out;
 }
 
 .header-svg-burger:hover,
@@ -171,7 +171,7 @@ input:checked+.slider:before {
 
 .x-cross-btn-svg {
   stroke: var(--color-accent-icon-dark);
-  transition: stroke 100ms;
+  transition: stroke .5s ease-in-out;
 }
 
 .x-cross-btn-svg:hover,
@@ -219,6 +219,7 @@ input:checked+.slider:before {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--font-color-main);
+  transition: color .5s ease-in-out;
 }
 
 .nav-item-mobil {
@@ -229,6 +230,7 @@ input:checked+.slider:before {
 
 .home-link-mob {
   color: #fff;
+  transition: color .5s ease-in-out;
 }
 
 .shopping-list-link-mob {
@@ -239,6 +241,7 @@ input:checked+.slider:before {
   margin-bottom: 17px;
   color: #fff;
   fill: #fff;
+  transition: color .5s ease-in-out, fill .5s ease-in-out;
 }
 
 .active-link {
@@ -247,7 +250,8 @@ input:checked+.slider:before {
   font-weight: 700;
   fill: #111;
   color: #111;
-  background: #eac645;
+  background-color: #eac645;
+  transition: color .5s ease-in-out, fill .5s ease-in-out, background-color .5s ease-in-out;
 }
 
 .burger-menu-photo {
@@ -297,6 +301,7 @@ input:checked+.slider:before {
 
   .home-link {
     color: var(--font-color-main-header);
+    transition: color .5s ease-in-out;
   }
 
   .shopping-list-link {
@@ -305,13 +310,14 @@ input:checked+.slider:before {
     align-items: center;
     gap: 4px;
     fill: var(--font-color-main-header);
-    ;
+    transition: color .5s ease-in-out, fill .5s ease-in-out;
   }
 
   .active-link {
     font-weight: 700;
     color: #111;
     fill: #111;
+    transition: color .5s ease-in-out, fill .5s ease-in-out;
   }
 
   .burger-menu-btn {
