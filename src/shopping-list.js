@@ -8,15 +8,22 @@ import './js/active-page-menu.js';
 import './js/mobile-menu.js';
 import './js/storage.js';
 import './js/dark-theme.js';
+import './js/supporters.js';
 import bookStackImageMobile from './images/books-stack-mobile.png';
 import bookStackImage from './images/books-stack.png';
 import amazonLogo from './images/amazon-logo.png';
 import appleBooksLogo from './images/apple-books-logo.png';
-
-import './js/supporters.js';
+import iconsDelete from './images/icons.svg';
 
 const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
+
+const interactiveElements = document.querySelectorAll(
+  'button, [role="button"], [href], [tabindex]'
+);
+interactiveElements.forEach(element => {
+  element.setAttribute('aria-label', 'See more');
+});
 
 //повідомлення про відсутність книг
 const emptyMessageContainer = document.createElement('div');
@@ -32,6 +39,7 @@ emptyMessageContainer.innerHTML = `
     alt="Empty Book Stack"  
   />
 `;
+let storedBooks = [];
 // отримання збережених книг з localStorage
 async function getStoredBooks() {
   try {
@@ -70,7 +78,7 @@ async function renderBooks() {
 }
 // Функція для створення карти книги
 function createBookCard(book) {
-  const { title, category, list_name, author, _id, buy_links, book_image } =
+  const { title, list_name, description, author, _id, buy_links, book_image } =
     book;
   const card = document.createElement('div');
   card.classList.add('book-card');
@@ -80,8 +88,8 @@ function createBookCard(book) {
   <img class="book-cover" src="${book_image}" alt="${title}" id="${_id}" />
   <div class="shopping-list-img-description">
     <h2 class="book-title">${title}</h2>
-    <h3 class="book-category">${category}</h3>
-    <p class="book-description">${list_name}</p>
+    <h3 class="book-category">${list_name}</h3>
+    <p class="book-description">${description}</p>
     <p class="book-author">${author}</p>
     <ul class="storage-shops">
       <li class="list-shop">
@@ -95,15 +103,14 @@ function createBookCard(book) {
         </a>
       </li>
     </ul>
-    <button class="remove-book-btn" data-book-id="${_id}">
+    <button type="button"class="remove-book-btn" data-book-id="${_id}">
       <svg width="38" height="38" class="remove-icon">
-        <use href="/images/icons.svg#icon-dump"></use>
+        <use xlink:href="${iconsDelete}#icon-dump"></use>
       </svg>
     </button>
   </div>
 </div>
   `;
-
   return card;
 }
 // Функція для видалення елемента з localStorage за ID
@@ -122,7 +129,6 @@ container.addEventListener('click', async event => {
   const removeButton = event.target.closest('.remove-book-btn');
   if (removeButton) {
     const bookId = removeButton.getAttribute('data-book-id');
-    console.log('Remove button clicked for book ID:', bookId);
     await removeBookFromLocalStorage(bookId);
   }
 });
