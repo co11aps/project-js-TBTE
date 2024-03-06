@@ -13,13 +13,13 @@ let modalBookEl;
 booksContainer.addEventListener('click', onBooksContainerClick);
 
 async function onBooksContainerClick(e) {
-  body.classList.add("no-scroll");
   modalBookEl = e.target.closest('.book-item');
   modalWindowContent.innerHTML = '';
   if (modalBookEl) {
     modalWindow.classList.remove('is-hidden');
     modalClose();
     try {
+      body.classList.add("no-scroll");
       let modalBookId = modalBookEl.id;
       let bookInfo = await getBookInfo(modalBookId);
       renderBookInfoModal(bookInfo);
