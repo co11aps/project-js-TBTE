@@ -237,9 +237,10 @@
   font-weight: 400;
   margin: auto;
   width: 242px;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.2;
   color: rgba(17, 17, 17, 0.5);
+  padding: 15px 0;
 }
 
 .dark .modal-pop-up-message {
@@ -247,6 +248,7 @@
 }
 
 .modal-link-to-list {
+  font-weight: bold;
   text-decoration: underline #4f2ee8;
   transition: color .2s ease-in-out;
 }
@@ -322,7 +324,6 @@
 
   .modal-pop-up-message {
     font-weight: 400;
-    font-size: 12px;
     line-height: 117%;
     letter-spacing: -0.04em;
     text-align: center;
