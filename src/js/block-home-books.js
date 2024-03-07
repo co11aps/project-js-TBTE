@@ -1,9 +1,9 @@
 import iziToast from 'izitoast';
+import refs from './refs';
 import { loaderOn } from './preloader.js';
 import { loaderOff } from './preloader.js';
 import { getPopularBooks } from './books-api.js';
 let bookCategory;
-export const mainContainer = document.querySelector('.main-content');
 
 function templateBookCard({
   _id,
@@ -56,7 +56,7 @@ function templateHomeBookMarkup(dataPopularBooks) {
 
 export function renderHomeBooksMarkup(dataPopularBooks) {
   const markup = templateHomeBookMarkup(dataPopularBooks);
-  mainContainer.innerHTML = markup;
+  refs.mainContainer.innerHTML = markup;
 }
 
 export function showError(msg) {
