@@ -5,8 +5,6 @@ import 'switch-button/dist/index.css';
 import Pagination from 'tui-pagination';
 import Swiper from 'swiper';
 import 'swiper/css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -30,7 +28,6 @@ import { categoriesList } from './js/category_home.js';
 import { onCategoryClick } from './js/selected_category.js';
 
 import { onSeeMoreClick } from './js/selected_category.js';
-
 
 import './js/modal-open.js';
 
