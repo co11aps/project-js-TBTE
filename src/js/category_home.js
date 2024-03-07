@@ -1,6 +1,6 @@
 export const categoriesList = document.querySelector('.categories-list');
 
-function addMarkup({ list_name }) {
+function addMarkup(list_name) {
   return `<li class="category-item"><button type="button" class="category-button" data-category="${list_name}" aria-label="${list_name}">${list_name}</button></li>`;
 }
 
