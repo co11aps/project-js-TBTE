@@ -31,13 +31,15 @@ import { onCategoryClick } from './js/selected_category.js';
 
 import { onSeeMoreClick } from './js/selected_category.js';
 
+
 import './js/modal-open.js';
 
 async function renderMainCategoriesList() {
   loaderOn();
   try {
     const data = await getCategories();
-    createCategoriesList(data);
+    const res = data.map(obj => obj.list_name).toSorted();
+    createCategoriesList(res);
   } catch (err) {
     showError(err);
   }
