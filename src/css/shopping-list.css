@@ -88,10 +88,9 @@
   letter-spacing: -0.04em;
   text-align: left;
   margin-bottom: 4px;
-  max-width: 100px;
+  min-width: 100px;
   max-width: 145px;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -109,6 +108,11 @@
   text-align: left;
   color: #b4afaf;
   margin-bottom: 8px;
+  max-width: 145px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .book-description {
@@ -268,12 +272,19 @@
     height: 27px;
   }
 
+  .book-title {
+    margin-bottom: 4px;
+    min-width: 100px;
+    max-width: 600px;
+  }
+
   .book-description {
     max-width: 508px;
   }
 
   .book-category {
     margin-bottom: 14px;
+    max-width: 600px
   }
 
   .remove-book-btn {
