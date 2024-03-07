@@ -65,8 +65,9 @@ export const modalClose = () => {
 
 //змінюємо інформацію котра знаходиться в сторедж
 async function onUpdateStorage(event) {
-  const id = event.target.previousElementSibling.previousElementSibling.firstElementChild.id;
-  console.log(id);
+  const id =
+    event.target.previousElementSibling.previousElementSibling.firstElementChild
+      .id;
   const data = await getBookInfo(id);
   handleBookInStorage(data);
 }
