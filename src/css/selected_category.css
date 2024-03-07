@@ -96,13 +96,11 @@
 
 
 .books_info-title {
-
     font-family: DM Sans;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
     line-break: auto;
-    /* line-clamp: 180px; */
     letter-spacing: -0.04em;
     text-align: left;
     color: rgba(17, 17, 17, 1);
@@ -111,7 +109,6 @@
     overflow: hidden;
     margin-top: 14px;
     margin-bottom: 4px;
-
 }
 
 .books_info-author {
