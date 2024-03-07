@@ -95,7 +95,7 @@ function createBookCard(book) {
       </li>
     </ul>
     <button aria-label="Delete book" type="button"class="remove-book-btn" data-book-id="${_id}">
-      <svg width="38" height="38" class="remove-icon">
+      <svg width="28" height="28" class="remove-icon">
         <use xlink:href="${iconsDelete}#icon-dump"></use>
       </svg>
     </button>
