@@ -293,12 +293,13 @@
     display: flex;
     gap: 24px;
     width: 616px;
-    height: 298px;
+    min-height: 298px;
   }
 
   .modal-img {
     max-width: 192px;
     min-height: 281px;
+    margin-bottom: 0;
   }
 
   .modal-book-title {
@@ -323,6 +324,7 @@
 
   .modal-pop-up-btn {
     padding: 20px 0;
+    margin-top: 0;
     min-width: 499px;
     font-size: 18px;
     line-height: 1.33;
