@@ -19,6 +19,8 @@
 @import url('./selected_category.css');
 @import url('./dark-theme.css');
 @import url('./tui-pagination.css');
+@import url('./form-for-weather.css');
+
 
 
 
@@ -46,6 +48,9 @@
   transition: background-color .25s ease-in-out;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -63,7 +68,6 @@
 .dark ::-webkit-scrollbar-thumb {
   background-color: #111111;
   border-radius: 12px;
-  transition: background-color .25s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {

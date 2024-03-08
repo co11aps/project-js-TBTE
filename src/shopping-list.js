@@ -21,7 +21,7 @@ const STORAGE_KEY = 'storage-of-books';
 const shoppingListUl = document.querySelector('.shopping-list');
 
 //повідомлення про відсутність книг
-const emptyMessageContainer = document.createElement('div');
+const emptyMessageContainer = document.createElement('li');
 emptyMessageContainer.classList.add('empty-message');
 emptyMessageContainer.innerHTML = `
   <p>This page is empty, add some books and proceed to order.</p>
