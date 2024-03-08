@@ -3,6 +3,95 @@
   --border-color-dark: #000;
 }
 
+/* ======================================= */
+
+span.tui-page-btn.tui-is-disabled.tui-first {
+  color: #333;
+    background-color: #111;
+   border-radius: 50%;
+}
+
+span.tui-page-btn.tui-is-disabled.tui-prev {
+  color: #333;
+    background-color: #111;
+   border-radius: 50%;
+}
+
+span.tui-page-btn.tui-is-disabled.tui-next {
+  color: #333;
+    background-color: #eac645;
+   border-radius: 50%;
+}
+
+span.tui-page-btn.tui-is-disabled.tui-last {
+  color: #333;
+    background-color: #eac645;
+   border-radius: 50%;
+}
+
+a.tui-page-btn.tui-first {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+a.tui-page-btn.tui-prev {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+a.tui-page-btn.tui-next {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+a.tui-page-btn.tui-last {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+
+a.tui-page-btn.tui-first-child {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+strong.tui-page-btn.tui-is-selected.tui-last-child {
+  color: #333;
+    background-color:  #4f2ee8;
+   border-radius: 50%;
+}
+
+a.tui-page-btn.tui-last-child {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+strong.tui-page-btn.tui-is-selected.tui-first-child {
+  color: #333;
+    background-color:  #4f2ee8;
+   border-radius: 50%;
+}
+
+strong.tui-page-btn.tui-is-selected {
+  color: #333;
+    background-color:  #4f2ee8;
+   border-radius: 50%;
+}
+a.tui-page-btn {
+  color: #333;
+    background-color: #fff;
+   border-radius: 50%;
+}
+
+
+
+/* ======================================== */
 .dark .shopping-list-title {
   color: #fff;
 }
