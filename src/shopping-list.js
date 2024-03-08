@@ -112,22 +112,15 @@ function shoppingListCalc() {
 let totalResults = shoppingListCalc();
   console.log('Stored books length:', totalResults);
 
-  // Визначення конфігурації пагінації
-          // const itemsPerPage = 3;
-  const currentPage = 1;
-
-  const options = {
-    totalItems: totalResults,
-    itemsPerPage: 3,
-    visiblePages: 3,
-    page: currentPage,
-  };
-
-  // Створення екземпляру пагінації
-  const pagination = new Pagination(boxPagination, options);
-  console.log(pagination);
-
-// -----
+// Створення екземпляру пагінації
+const pagination = new Pagination(boxPagination, {
+  totalItems: totalResults,
+  itemsPerPage: 3,
+  visiblePages: 3,
+  page: 1,
+});
+console.log(pagination);
+ 
 
 document.querySelector('.container-pagination').classList.add('is-hidden');
 // Функція для відображення списку книг
@@ -150,18 +143,18 @@ async function renderBooks(totalResults, page) {
         shoppingListUl.appendChild(li);
       });
 
-      // Показати пагінацію, якщо кількість книг >= 3
+      // Показати пагінацію, якщо кількість книг >= 4
       if (storedBooks.length >= 4) {
         document.querySelector('.container-pagination').classList.remove('is-hidden');
       } else {
-        // Приховати пагінацію, якщо кількість книг < 3
+        // Приховати пагінацію, якщо кількість книг < 4
         document.querySelector('.container-pagination').classList.add('is-hidden');
       }
     } else {
       // Якщо немає збережених книг, вивести повідомлення про відсутність
       shoppingListUl.appendChild(emptyMessageContainer);
       
-      // Приховати пагінацію, якщо кількість книг < 3
+      // Приховати пагінацію, якщо кількість книг < 4
       document.querySelector('.container-pagination').classList.add('is-hidden');
     }
   } catch (error) {
@@ -169,25 +162,48 @@ async function renderBooks(totalResults, page) {
   }
 }
 
-renderBooks(totalResults, 1);
+// Функція для оновлення totalItems та оновлення пагінації
+function updatePaginationTotalItems() {
+  // pagination.movePageTo(1)
+  pagination.reset();
 
+  totalResults = shoppingListCalc();
+  pagination.setTotalItems(totalResults);
+  
+  // renderBooks(totalResults, 1);
+}
 
 pagination.on('beforeMove', (event) => {
-    const currentPage = event.page;
+  
+  const currentPage = event.page;
   renderBooks(totalResults, currentPage);
   console.log(currentPage);
 });
 
+
+renderBooks(totalResults, 1);
+
+
+// pagination.on('beforeMove', (event) => {
+  
+//   const currentPage = event.page;
+//   updatePaginationTotalItems()
+//   renderBooks(totalResults, currentPage);
+
+
+//   console.log(currentPage);
+// });
+
 let updatedBooks;
+
 // Функція для видалення книг з LS
 async function removeBookFromLocalStorage(bookId) {
   try {
     const storedBooks = await getStoredBooks();
     updatedBooks = storedBooks.filter(book => book._id !== bookId);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedBooks));
-
-    // Оновлюємо totalResults після видалення книги
-    totalResults = updatedBooks.length;
+    
+    updatePaginationTotalItems()
 
     renderBooks(totalResults, 1);
   } catch (error) {
@@ -206,6 +222,8 @@ container.addEventListener('click', async event => {
     await removeBookFromLocalStorage(bookId);
     // Оновлення конфігурації пагінації
     pagination.reset();
+    //  updatePaginationTotalItems()
+
   }
 });
 
