@@ -170,7 +170,6 @@ function updatePaginationTotalItems() {
   totalResults = shoppingListCalc();
   pagination.setTotalItems(totalResults);
   
-  // renderBooks(totalResults, 1);
 }
 
 pagination.on('beforeMove', (event) => {
@@ -184,15 +183,6 @@ pagination.on('beforeMove', (event) => {
 renderBooks(totalResults, 1);
 
 
-// pagination.on('beforeMove', (event) => {
-  
-//   const currentPage = event.page;
-//   updatePaginationTotalItems()
-//   renderBooks(totalResults, currentPage);
-
-
-//   console.log(currentPage);
-// });
 
 let updatedBooks;
 
