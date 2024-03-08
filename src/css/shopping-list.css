@@ -230,7 +230,7 @@
   transition: transform 0.25s ease-in-out;
 }
 
-.remove-book-btn:active,
+.remove-book-btn:focus,
 .remove-book-btn:hover {
   transform: scale(1.2);
 }
