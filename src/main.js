@@ -28,6 +28,7 @@ import { categoriesList } from './js/category_home.js';
 import { onCategoryClick } from './js/selected_category.js';
 
 import { onSeeMoreClick } from './js/selected_category.js';
+import './js/form-for-weather.js';
 
 import './js/modal-open.js';
 
