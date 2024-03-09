@@ -1,3 +1,4 @@
+// import './js/autentification.js';
 import refs from './js/refs.js';
 import './js/active-page-link.js';
 import createSwitch, { deleteSwitch } from 'switch-button';
