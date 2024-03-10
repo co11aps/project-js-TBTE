@@ -301,6 +301,12 @@ input:checked+.slider:before {
     transition: color .25s ease-in-out;
   }
 
+  .auth-link {
+    position: relative;
+    color: var(--font-color-main-header);
+    transition: color .25s ease-in-out;
+  }
+
   .shopping-list-link {
     position: relative;
     color: var(--font-color-main-header);
