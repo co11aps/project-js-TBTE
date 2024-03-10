@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-3cfb730f.js";import{a as b,b as h}from"./assets/apple-books-logo-29664358.js";import"./assets/vendor-c3fabd4a.js";const u="/project-js-TBTE/assets/books-stack-mobile-487658af.png",l="/project-js-TBTE/assets/books-stack-a8e7c57b.png",y="/project-js-TBTE/assets/icons-5a87309a.svg",d="storage-of-books",r=document.querySelector(".shopping-list"),c=document.createElement("li");c.classList.add("empty-message");c.innerHTML=`
+import"./assets/modulepreload-polyfill-3cfb730f.js";import{a as b,b as h}from"./assets/apple-books-logo-585576ce.js";import"./assets/vendor-c3fabd4a.js";const u="/project-js-TBTE/assets/books-stack-mobile-487658af.png",l="/project-js-TBTE/assets/books-stack-a8e7c57b.png",y="/project-js-TBTE/assets/icons-5a87309a.svg",d="storage-of-books",r=document.querySelector(".shopping-list"),c=document.createElement("li");c.classList.add("empty-message");c.innerHTML=`
   <p>This page is empty, add some books and proceed to order.</p>
   <img 
     class="book-stack-image"
