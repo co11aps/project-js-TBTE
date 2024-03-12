@@ -94,7 +94,12 @@ function handleSignUp() {
   }
   // Create user with email and pass.
   createUserWithEmailAndPassword(auth, email, password)
-    .then(userCredential => console.log(userCredential.user))
+    .then(userCredential =>
+      updateProfile(userCredential.user, {
+        displayName: 'Jane Q. User',
+        photoURL: 'https://example.com/jane-q-user/profile.jpg',
+      })
+    )
     .catch(function (error) {
       // Handle Errors here.
       const errorCode = error.code;
