@@ -96,7 +96,7 @@ function handleSignUp() {
   createUserWithEmailAndPassword(auth, email, password)
     .then(userCredential =>
       updateProfile(userCredential.user, {
-        displayName: 'Jane Q. User',
+        displayName: userName,
         photoURL: 'https://example.com/jane-q-user/profile.jpg',
       })
     )
