@@ -1,0 +1,75 @@
+<div class="backdrop-auth-pop-up is-hidden" auth-data-pop-up auth-data-modal>
+  <div class="auth-pop-up">
+    <button
+      type="button"
+      class="close-button auth-pop-up-close-btn"
+      aria-label="Close"
+      data-modal-close
+    >
+      <svg class="close-button__icon" width="24" height="24">
+        <use class="icon-x-close" href="./images/icons.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <div class="auth-pop-up-content">
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="text"
+        id="user-name"
+        name="user-name"
+        placeholder="NAME"
+      />
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="text"
+        id="email"
+        name="email"
+        placeholder="EMAIL"
+      />
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="PASSWORD"
+      />
+    </div>
+    <button
+      aria-label="Sign in"
+      type="button"
+      class="button mdl-button mdl-js-button mdl-button--raised"
+      id="quickstart-sign-in"
+      name="signin"
+    >
+      SIGN IN
+    </button>
+
+    <div class="controls-container">
+      <button
+        aria-label="Sign up"
+        type="button"
+        class="pop-up-sign-up-btn auth-controls-btn button"
+      >
+        SIGN IN
+      </button>
+      <button
+        aria-label="Sign in"
+        type="button"
+        class="pop-up-sign-up-btn auth-controls-btn button"
+      >
+        SIGN UP
+      </button>
+      <button
+        aria-label="Sign in"
+        type="button"
+        class="quickstart-password-reset auth-controls-btn button"
+        id="quickstart-password-reset"
+      >
+        forget password?
+      </button>
+    </div>
+  </div>
+</div>

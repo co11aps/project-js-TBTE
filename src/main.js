@@ -32,6 +32,8 @@ import { onSeeMoreClick } from './js/selected_category.js';
 import './js/form-for-weather.js';
 
 import './js/modal-open.js';
+import './js/auth-menu-open.js';
+import './js/auth.js';
 
 async function renderMainCategoriesList() {
   loaderOn();

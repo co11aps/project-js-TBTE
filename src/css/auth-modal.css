@@ -1,0 +1,131 @@
+.backdrop-auth-pop-up {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 43, 208, 0.9);
+
+    opacity: 1;
+    /* cursor: pointer; */
+    z-index: 100;
+}
+
+.auth-pop-up {
+    z-index: 110;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 40px 20px;
+    /* width: 80%; */
+    min-height: auto;
+    max-height: 384px;
+    width: 335px;
+    overflow: hidden;
+    background-color: var(--main-color-primary);
+    border: 1.5px solid var(--border-color-light);
+    border-radius: 18px;
+}
+
+.auth-pop-up-content {
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mdl-textfield__input {
+    width: 294px;
+    height: 50px;
+    padding: 16px 20px;
+    border-radius: 40px;
+    border: 2px solid #4f2ee8;
+
+}
+
+
+.mdl-js-button {
+    color: rgb(246, 6, 6);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px;
+    width: 294px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    background-color: var(--main-color-maim);
+    border-radius: 40px;
+    border: 2px solid #4f2ee8;
+    font-weight: 700;
+    transition-property: color, background-color, scale;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    /* position: relative; */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dark .mdl-js-button {
+    background-color: var(--main-color-maim);
+    color: white;
+}
+
+.mdl-js-button:hover {
+    background-color: #4f2ee8;
+    color: white;
+}
+
+.controls-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.auth-controls-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--font-color-main-header);
+}
+
+@media screen and (min-width: 768px) {
+
+    .auth-pop-up {
+        padding: 40px;
+        padding-top: 80px;
+        max-height: 516px;
+        width: 579px;
+    }
+
+    .auth-pop-up-content {
+        width: 499px;
+        gap: 40px;
+    }
+
+    .mdl-textfield__input {
+        width: 498px;
+        height: 60px;
+        padding: 20px 24px;
+        border-radius: 40px;
+        font-size: 18px;
+    }
+
+    .mdl-js-button {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 16px 20px;
+        width: 498px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+
+}

@@ -20,15 +20,16 @@ if (window.location.hostname === 'localhost') {
 }
 
 const emailInput = document.getElementById('email');
+const userNamelInput = document.getElementById('user-name');
 const passwordInput = document.getElementById('password');
 const signInButton = document.getElementById('quickstart-sign-in');
 const signUpButton = document.getElementById('quickstart-sign-up');
 const passwordResetButton = document.getElementById(
   'quickstart-password-reset'
 );
-const verifyEmailButton = document.getElementById('quickstart-verify-email');
-const signInStatus = document.getElementById('quickstart-sign-in-status');
-const accountDetails = document.getElementById('quickstart-account-details');
+// const verifyEmailButton = document.getElementById('quickstart-verify-email');
+// const signInStatus = document.getElementById('quickstart-sign-in-status');
+// const accountDetails = document.getElementById('quickstart-account-details');
 
 /**
  * Handles the sign in button press.
@@ -124,7 +125,7 @@ function sendPasswordReset() {
 
 // Listening for auth state changes.
 onAuthStateChanged(auth, function (user) {
-  verifyEmailButton.disabled = true;
+  // verifyEmailButton.disabled = true;
   if (user) {
     // User is signed in.
     const displayName = user.displayName;
@@ -134,22 +135,22 @@ onAuthStateChanged(auth, function (user) {
     const isAnonymous = user.isAnonymous;
     const uid = user.uid;
     const providerData = user.providerData;
-    signInStatus.textContent = 'Signed in';
+    // signInStatus.textContent = 'Signed in';
     signInButton.textContent = 'Sign out';
-    accountDetails.textContent = JSON.stringify(user, null, '  ');
+    // accountDetails.textContent = JSON.stringify(user, null, '  ');
     if (!emailVerified) {
-      verifyEmailButton.disabled = false;
+      // verifyEmailButton.disabled = false;
     }
   } else {
     // User is signed out.
-    signInStatus.textContent = 'Signed out';
+    // signInStatus.textContent = 'Signed out';
     signInButton.textContent = 'Sign in';
-    accountDetails.textContent = 'null';
+    // accountDetails.textContent = 'null';
   }
   signInButton.disabled = false;
 });
 
 signInButton.addEventListener('click', toggleSignIn, false);
-signUpButton.addEventListener('click', handleSignUp, false);
-verifyEmailButton.addEventListener('click', sendVerificationEmailToUser, false);
+// signUpButton.addEventListener('click', handleSignUp, false);
+// verifyEmailButton.addEventListener('click', sendVerificationEmailToUser, false);
 passwordResetButton.addEventListener('click', sendPasswordReset, false);
