@@ -94,11 +94,7 @@ function handleSignUp() {
   }
   // Create user with email and pass.
   createUserWithEmailAndPassword(auth, email, password)
-    .then(userCredential =>
-      updateProfile(userCredential.user, {
-        displayName: 'Jane Q. User',
-      })
-    )
+    .then(userCredential => console.log(userCredential.user))
     .catch(function (error) {
       // Handle Errors here.
       const errorCode = error.code;
