@@ -94,7 +94,6 @@ function handleSignUp() {
   }
   // Create user with email and pass.
   createUserWithEmailAndPassword(auth, email, password)
-    .then(console.log(userCredential))
     .then(userCredential =>
       updateProfile(userCredential.user, {
         displayName: 'Jane Q. User',
