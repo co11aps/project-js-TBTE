@@ -9,8 +9,9 @@
     <script type="module" crossorigin src="/project-js-TBTE/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/vendor-c3fabd4a.js">
-    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-585576ce.js">
-    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-eb4ead74.css">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-9a765457.js">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/config-905a1586.js">
+    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-c91ce6e9.css">
     <link rel="stylesheet" href="/project-js-TBTE/assets/vendor-a168afd9.css">
   </head>
   <body>
@@ -50,6 +51,15 @@
       </div>
 
       <button
+        aria-label="Sign in"
+        type="button"
+        class="button header-sign-in-btn"
+        name="signin"
+      >
+        SIGN IN
+      </button>
+
+      <button
         class="burger-menu-btn btn-active"
         type="button"
         aria-label="Open page menu"
@@ -71,36 +81,36 @@
       </button>
     </div>
   </header>
+</div>
 
-  <div class="backdrop-menu">
-    <div class="nav-container">
-      <nav class="nav-mobil">
-        <ul class="nav-list-mobil">
-          <li class="nav-item-mobil">
-            <a class="home-link-mob" href="./index.html">HOME</a>
-          </li>
-          <li class="nav-item-mobil">
-            <a class="shopping-list-link-mob" href="./shopping-list.html"
-              >SHOPPING LIST<svg
-                class="shopping-link-icon-mob"
-                width="20"
-                height="20"
-              >
-                <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-cart"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+<div class="backdrop-menu">
+  <div class="nav-container">
+    <nav class="nav-mobil">
+      <ul class="nav-list-mobil">
+        <li class="nav-item-mobil">
+          <a class="home-link-mob" href="./index.html">HOME</a>
+        </li>
+        <li class="nav-item-mobil">
+          <a class="shopping-list-link-mob" href="./shopping-list.html"
+            >SHOPPING LIST<svg
+              class="shopping-link-icon-mob"
+              width="20"
+              height="20"
+            >
+              <use href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <div>
-      <img
-        class="burger-menu-photo"
-        src="/project-js-TBTE/assets/books-mobile-menu-8eca3f0b.png"
-        alt="books"
-      />
-    </div>
+  <div>
+    <img
+      class="burger-menu-photo"
+      src="/project-js-TBTE/assets/books-mobile-menu-8eca3f0b.png"
+      alt="books"
+    />
   </div>
 </div>
 
@@ -194,6 +204,82 @@
       class="modal-pop-up-btn button">
       Add to shopping list
     </button>
+  </div>
+</div>
+
+    <div class="backdrop-auth-pop-up is-hidden" auth-data-pop-up auth-data-modal>
+  <div class="auth-pop-up">
+    <button
+      type="button"
+      class="close-button auth-pop-up-close-btn"
+      aria-label="Close"
+      data-modal-close
+    >
+      <svg class="close-button__icon" width="24" height="24">
+        <use class="icon-x-close" href="/project-js-TBTE/assets/icons-5a87309a.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <div class="auth-pop-up-content">
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="text"
+        id="user-name"
+        name="user-name"
+        placeholder="NAME"
+      />
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="text"
+        id="email"
+        name="email"
+        placeholder="EMAIL"
+      />
+      <input
+        class="mdl-textfield__input"
+        style="display: inline; width: auto"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="PASSWORD"
+      />
+    </div>
+    <button
+      aria-label="Sign in"
+      type="button"
+      class="button mdl-button mdl-js-button mdl-button--raised"
+      id="quickstart-sign-in"
+      name="signin"
+    >
+      SIGN IN
+    </button>
+
+    <div class="controls-container">
+      <button
+        aria-label="Sign up"
+        type="button"
+        class="pop-up-sign-up-btn auth-controls-btn button"
+      >
+        SIGN IN
+      </button>
+      <button
+        aria-label="Sign in"
+        type="button"
+        class="pop-up-sign-up-btn auth-controls-btn button"
+      >
+        SIGN UP
+      </button>
+      <button
+        aria-label="Sign in"
+        type="button"
+        class="quickstart-password-reset auth-controls-btn button"
+        id="quickstart-password-reset"
+      >
+        forget password?
+      </button>
+    </div>
   </div>
 </div>
 
