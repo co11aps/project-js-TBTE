@@ -8,6 +8,7 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 import { firebaseConfig } from './js/config';
 
@@ -21,6 +22,7 @@ if (window.location.hostname === 'localhost') {
 
 const emailInput = document.getElementById('email')! as HTMLInputElement;
 const passwordInput = document.getElementById('password')! as HTMLInputElement;
+const userNameInput = document.getElementById('user-name')! as HTMLInputElement;
 const signInButton = document.getElementById(
   'quickstart-sign-in'
 )! as HTMLButtonElement;
@@ -49,6 +51,7 @@ function toggleSignIn() {
   } else {
     const email = emailInput.value;
     const password = passwordInput.value;
+
     if (email.length < 4) {
       alert('Please enter an email address.');
       return;
@@ -80,6 +83,7 @@ function toggleSignIn() {
 function handleSignUp() {
   const email = emailInput.value;
   const password = passwordInput.value;
+  const userName = userNameInput.value;
   if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -89,17 +93,23 @@ function handleSignUp() {
     return;
   }
   // Create user with email and pass.
-  createUserWithEmailAndPassword(auth, email, password).catch(function (error) {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    if (errorCode == 'auth/weak-password') {
-      alert('The password is too weak.');
-    } else {
-      alert(errorMessage);
-    }
-    console.log(error);
-  });
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredential =>
+      updateProfile(userCredential.user, {
+        displayName: 'Jane Q. User',
+      })
+    )
+    .catch(function (error) {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode == 'auth/weak-password') {
+        alert('The password is too weak.');
+      } else {
+        alert(errorMessage);
+      }
+      console.log(error);
+    });
 }
 
 /**
