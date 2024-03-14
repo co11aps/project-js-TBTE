@@ -7,6 +7,9 @@ import './js/mobile-menu.js';
 import './js/storage.js';
 import './js/dark-theme.js';
 import './js/supporters.js';
+import './js/auth.js';
+import './js/auth-menu-open.js';
+
 import bookStackImageMobile from './images/books-stack-mobile.png';
 import bookStackImage from './images/books-stack.png';
 import amazonLogo from './images/amazon-logo.png';

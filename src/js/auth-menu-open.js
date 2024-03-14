@@ -35,5 +35,6 @@ function switchToSignUpMode() {
   signUpModeBtn.textContent = 'SIGN IN';
   refs.signInButton.textContent = 'SIGN UP';
   popUpControls.classList.add('is-hidden');
+  refs.signInButton.removeEventListener('click', toggleSignIn, false);
   refs.signUpButton.addEventListener('click', handleSignUp, false);
 }
