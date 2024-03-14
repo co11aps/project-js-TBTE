@@ -16,9 +16,9 @@ initializeApp(firebaseConfig);
 
 const auth = getAuth();
 
-if (window.location.hostname === 'localhost') {
-  connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-}
+// if (window.location.hostname === 'localhost') {
+//   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
+// }
 
 const emailInput = document.getElementById('email')! as HTMLInputElement;
 const passwordInput = document.getElementById('password')! as HTMLInputElement;

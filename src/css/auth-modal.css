@@ -32,8 +32,10 @@
 .auth-pop-up-content {
     width: 295px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 24px;
+    height: 124px;
+    overflow: hidden;
 }
 
 .mdl-textfield__input {
@@ -87,7 +89,7 @@
 .controls-container {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .auth-controls-btn {
@@ -102,12 +104,15 @@
         padding: 40px;
         padding-top: 80px;
         max-height: 516px;
+        min-height: 200px;
         width: 579px;
     }
 
     .auth-pop-up-content {
         width: 499px;
         gap: 40px;
+        height: 160px;
+
     }
 
     .mdl-textfield__input {

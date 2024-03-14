@@ -11,23 +11,25 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import { firebaseConfig } from './config';
+import refs from './refs';
 
 initializeApp(firebaseConfig);
 
 const auth = getAuth();
 
-if (window.location.hostname === 'localhost') {
-  connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-}
+// if (window.location.hostname === 'localhost') {
+//   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
+// }
 
 const emailInput = document.getElementById('email');
-const userNamelInput = document.getElementById('user-name');
+const userNameInput = document.getElementById('user-name');
 const passwordInput = document.getElementById('password');
 const signInButton = document.getElementById('quickstart-sign-in');
 const signUpButton = document.getElementById('quickstart-sign-up');
 const passwordResetButton = document.getElementById(
   'quickstart-password-reset'
 );
+
 // const verifyEmailButton = document.getElementById('quickstart-verify-email');
 // const signInStatus = document.getElementById('quickstart-sign-in-status');
 // const accountDetails = document.getElementById('quickstart-account-details');
@@ -72,6 +74,7 @@ function toggleSignIn() {
 function handleSignUp() {
   const email = emailInput.value;
   const password = passwordInput.value;
+  const userName = userNameInput.value;
   if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -81,28 +84,34 @@ function handleSignUp() {
     return;
   }
   // Create user with email and pass.
-  createUserWithEmailAndPassword(auth, email, password).catch(function (error) {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    if (errorCode == 'auth/weak-password') {
-      alert('The password is too weak.');
-    } else {
-      alert(errorMessage);
-    }
-    console.log(error);
-  });
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredential =>
+      updateProfile(userCredential.user, {
+        displayName: userName,
+      })
+    )
+    .catch(function (error) {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode == 'auth/weak-password') {
+        alert('The password is too weak.');
+      } else {
+        alert(errorMessage);
+      }
+      console.log(error);
+    });
 }
 
 /**
  * Sends an email verification to the user.
  */
-function sendVerificationEmailToUser() {
-  sendEmailVerification(auth.currentUser).then(function () {
-    // Email Verification sent!
-    alert('Email Verification Sent!');
-  });
-}
+// function sendVerificationEmailToUser() {
+//   sendEmailVerification(auth.currentUser).then(function () {
+//     // Email Verification sent!
+//     alert('Email Verification Sent!');
+//   });
+// }
 
 function sendPasswordReset() {
   const email = emailInput.value;
@@ -138,13 +147,15 @@ onAuthStateChanged(auth, function (user) {
     const providerData = user.providerData;
     // signInStatus.textContent = 'Signed in';
     signInButton.textContent = 'Sign out';
+    refs.headerSignInBtn.textContent = displayName;
     // accountDetails.textContent = JSON.stringify(user, null, '  ');
-    if (!emailVerified) {
-      // verifyEmailButton.disabled = false;
-    }
+    // if (!emailVerified) {
+    // verifyEmailButton.disabled = false;
+    // }
   } else {
     // User is signed out.
     // signInStatus.textContent = 'Signed out';
+    refs.headerSignInBtn.textContent = 'Sign in';
     signInButton.textContent = 'Sign in';
     // accountDetails.textContent = 'null';
   }

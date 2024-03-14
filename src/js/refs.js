@@ -14,4 +14,5 @@ export default {
   iconUse: document.querySelector('.header-use-logo'),
   toTopButton: document.getElementById('to-top-button'),
   body: document.querySelector('body'),
+  headerSignInBtn: document.querySelector('.header-sign-in-btn'),
 };
