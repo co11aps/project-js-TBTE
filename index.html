@@ -8,10 +8,10 @@
     
     <script type="module" crossorigin src="/project-js-TBTE/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/modulepreload-polyfill-3cfb730f.js">
-    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/vendor-930f8b07.js">
-    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-c4b38eda.js">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/vendor-695d5387.js">
+    <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/apple-books-logo-18da0369.js">
     <link rel="modulepreload" crossorigin href="/project-js-TBTE/assets/config-905a1586.js">
-    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-c91ce6e9.css">
+    <link rel="stylesheet" href="/project-js-TBTE/assets/apple-books-logo-f76bdaef.css">
     <link rel="stylesheet" href="/project-js-TBTE/assets/vendor-a168afd9.css">
   </head>
   <body>
@@ -224,10 +224,10 @@
       <input
         class="mdl-textfield__input"
         style="display: inline; width: auto"
-        type="text"
-        id="user-name"
-        name="user-name"
-        placeholder="NAME"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="PASSWORD"
       />
       <input
         class="mdl-textfield__input"
@@ -238,12 +238,12 @@
         placeholder="EMAIL"
       />
       <input
-        class="mdl-textfield__input"
+        class="mdl-textfield__input is-hidden"
         style="display: inline; width: auto"
-        type="password"
-        id="password"
-        name="password"
-        placeholder="PASSWORD"
+        type="text"
+        id="user-name"
+        name="user-name"
+        placeholder="NAME"
       />
     </div>
     <button
@@ -262,17 +262,10 @@
         type="button"
         class="pop-up-sign-up-btn auth-controls-btn button"
       >
-        SIGN IN
-      </button>
-      <button
-        aria-label="Sign in"
-        type="button"
-        class="pop-up-sign-up-btn auth-controls-btn button"
-      >
         SIGN UP
       </button>
       <button
-        aria-label="Sign in"
+        aria-label="reset password"
         type="button"
         class="quickstart-password-reset auth-controls-btn button"
         id="quickstart-password-reset"
