@@ -34,8 +34,20 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 24px;
-    height: 124px;
+    height: 132px;
     overflow: hidden;
+    transition: transform 0.25s ease-in-out;
+}
+
+.sign-up-mode .auth-pop-up-content {
+    width: 295px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+    height: 206px;
+    padding: 2px 0;
+    overflow: hidden;
+    transition: transform, 0.25s ease-in-out;
 }
 
 .mdl-textfield__input {
@@ -113,6 +125,13 @@
         gap: 40px;
         height: 160px;
 
+    }
+
+    .sign-up-mode .auth-pop-up-content {
+        width: 499px;
+        height: 264px;
+        gap: 40px;
+        padding: 2px 0;
     }
 
     .mdl-textfield__input {

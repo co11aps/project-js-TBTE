@@ -24,8 +24,8 @@ const auth = getAuth();
 const emailInput = document.getElementById('email');
 const userNameInput = document.getElementById('user-name');
 const passwordInput = document.getElementById('password');
-const signInButton = document.getElementById('quickstart-sign-in');
-const signUpButton = document.getElementById('quickstart-sign-up');
+// const signInButton = document.getElementById('quickstart-sign-in');
+// const signUpButton = document.getElementById('quickstart-sign-up');
 const passwordResetButton = document.getElementById(
   'quickstart-password-reset'
 );
@@ -37,7 +37,7 @@ const passwordResetButton = document.getElementById(
 /**
  * Handles the sign in button press.
  */
-function toggleSignIn() {
+export function toggleSignIn() {
   if (auth.currentUser) {
     signOut(auth);
   } else {
@@ -62,16 +62,16 @@ function toggleSignIn() {
         alert(errorMessage);
       }
       console.log(error);
-      signInButton.disabled = false;
+      refs.signInButton.disabled = false;
     });
   }
-  signInButton.disabled = true;
+  refs.signInButton.disabled = true;
 }
 
 /**
  * Handles the sign up button press.
  */
-function handleSignUp() {
+export function handleSignUp() {
   const email = emailInput.value;
   const password = passwordInput.value;
   const userName = userNameInput.value;
@@ -81,6 +81,10 @@ function handleSignUp() {
   }
   if (password.length < 4) {
     alert('Please enter a password.');
+    return;
+  }
+  if (userName.length < 4) {
+    alert('Please enter a User name.');
     return;
   }
   // Create user with email and pass.
@@ -146,7 +150,7 @@ onAuthStateChanged(auth, function (user) {
     const uid = user.uid;
     const providerData = user.providerData;
     // signInStatus.textContent = 'Signed in';
-    signInButton.textContent = 'Sign out';
+    refs.signInButton.textContent = 'Sign out';
     refs.headerSignInBtn.textContent = displayName;
     // accountDetails.textContent = JSON.stringify(user, null, '  ');
     // if (!emailVerified) {
@@ -156,13 +160,13 @@ onAuthStateChanged(auth, function (user) {
     // User is signed out.
     // signInStatus.textContent = 'Signed out';
     refs.headerSignInBtn.textContent = 'Sign in';
-    signInButton.textContent = 'Sign in';
+    refs.signInButton.textContent = 'Sign in';
     // accountDetails.textContent = 'null';
   }
-  signInButton.disabled = false;
+  refs.signInButton.disabled = false;
 });
 
-signInButton.addEventListener('click', toggleSignIn, false);
-// signUpButton.addEventListener('click', handleSignUp, false);
+// refs.signInButton.addEventListener('click', toggleSignIn, false);
+// refs.signUpButton.addEventListener('click', handleSignUp, false);
 // verifyEmailButton.addEventListener('click', sendVerificationEmailToUser, false);
 passwordResetButton.addEventListener('click', sendPasswordReset, false);
