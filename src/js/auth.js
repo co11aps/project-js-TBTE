@@ -12,6 +12,7 @@ import {
 } from 'firebase/auth';
 import { firebaseConfig } from './config';
 import refs from './refs';
+import { closeMenu } from './auth-menu-open';
 
 initializeApp(firebaseConfig);
 
@@ -66,6 +67,7 @@ export function toggleSignIn() {
     });
   }
   refs.signInButton.disabled = true;
+  closeMenu();
 }
 
 /**

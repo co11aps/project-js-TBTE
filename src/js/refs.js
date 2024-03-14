@@ -17,4 +17,5 @@ export default {
   headerSignInBtn: document.querySelector('.header-sign-in-btn'),
   signInButton: document.getElementById('quickstart-sign-in'),
   signUpButton: document.querySelector('.quickstart-sign-up'),
+  authMenu: document.querySelector('.backdrop-auth-pop-up'),
 };
