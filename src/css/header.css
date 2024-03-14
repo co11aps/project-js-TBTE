@@ -262,7 +262,9 @@ input:checked+.slider:before {
   display: none;
 }
 
-
+.header-sign-in-btn {
+  display: none;
+}
 
 /* ===================== */
 
@@ -338,16 +340,54 @@ input:checked+.slider:before {
   }
 
 
-
-
-
-
-
-
   .active-link {
     font-weight: 700;
     color: #111;
     fill: #111;
+  }
+
+  .header-sign-in-btn {
+    display: flex;
+    height: 48px;
+    width: 184px;
+
+  }
+
+  .header-sign-in-btn {
+    color: white;
+    margin-left: 24px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    width: 184px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #111;
+    background-color: var(--main-color-maim);
+    border-radius: 40px;
+    border: 2px solid #4f2ee8;
+    padding: 14px 25px;
+    transition-property: color, background-color, scale;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .dark .header-sign-in-btn {
+    background-color: var(--main-color-maim);
+    color: white;
+  }
+
+  .header-sign-in-btn:hover {
+    background-color: #4f2ee8;
+    color: white;
   }
 
   .burger-menu-btn {
@@ -357,7 +397,6 @@ input:checked+.slider:before {
   .x-cross-menu-btn {
     display: none;
   }
-
 
   div.backdrop-menu {
     display: none;
