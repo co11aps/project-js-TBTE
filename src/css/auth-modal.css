@@ -33,6 +33,7 @@
     width: 295px;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     gap: 24px;
     height: 132px;
     overflow: hidden;
@@ -42,6 +43,7 @@
 .sign-up-mode .auth-pop-up-content {
     width: 295px;
     display: flex;
+    align-items: center;
     flex-direction: column-reverse;
     gap: 24px;
     height: 206px;
@@ -121,14 +123,15 @@
     }
 
     .auth-pop-up-content {
-        width: 499px;
+        width: 504px;
         gap: 40px;
-        height: 160px;
+        height: 172px;
+        padding: 2px 0;
 
     }
 
     .sign-up-mode .auth-pop-up-content {
-        width: 499px;
+        width: 504px;
         height: 264px;
         gap: 40px;
         padding: 2px 0;
